@@ -1,0 +1,72 @@
+Brief overview of what is to come
+
+Resources are downloaded:
+- lecture notes
+- sample code
+
+High-Level Overview of Web Development
+- Static Website
+  * Website where files are simply sent to browser as they are
+  ~ Web Browser sends a request to the Web Server where the Site is hosted
+  ~ Web Server sends a response (sends files such as HTML, CSS, JS, and images 
+    involved in the site) to the Web Browser
+  ~ Web Browser will display the Website
+  ~ involves mostly the front-end
+  * front-end develepmont is the process of writing the files such as HTML, CSS, and 
+    JS
+
+- Dynamic Website
+  * Website files are "assembled" on the server
+  ~ Web Browser sends a request to the Web Server where the Site is hosted
+  ~ Apps and Databases are running in the server
+  ~ The back-end (node.js, php, python, etc.) are the ones running
+  * back-end development is the process of witing the hidden files (node.js, php,
+    python, etc.) involved in a website
+  ~ Web Server sends a response (sends files such as HTMl, CSS, JS, and images and
+    result from the apps and databases involved in the site) to the Web Browser
+  ~ Web Browser will display the Website
+
+- 3 Languages of Front-end
+  ~ HTML
+    o Content
+    o Noun (<p></p> is paragraph)
+  ~ CSS
+    o Presentation / Style
+    o Adjective (p {color:red} means "the paragraph text is red")
+  ~ JS
+    o Dynamic effects / functionalities and web applications
+    o Verb (p.hide(); means "hide the paragraph")
+
+Setting Up Code Editor
+- VS Code is suggested
+- download extension named "Prettier"
+- in settings, search default format
+- under Editor: Default Formatter choose "Prettier - Code Formatter"
+- in settings, search for format on save then check the box
+- in settings, search for auto save and choose onFocusChange
+* onFocusChange will save the file when you go to other files/tab
+- optionally, you may search for tab size and change it to 2
+- optionally, you may download an extension named "One Monokai Theme" to match the
+  theme
+
+Coding of a Basic Webpage
+- create a folder (project folder)
+- open folder in VS Code
+- create index.html file
+* index.html is the default first page of any website
+* in index.html, type "!" and press enter/tab
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Webpage</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <p>My name is Lee, and this is my very first webpage</p>
+  </body>
+</html>
+
+Some additional quick tips and information is given

@@ -1,0 +1,313 @@
+HTML
+- HyperText Markup Language
+- markup language that web developers use to structure and
+  describe the content of a webpage (not a programming
+  language)
+- HTML consists of elements that describe different types
+  of content
+- Web Browsers understand HTML code as websites
+
+HTML Element
+- Opening tag
+  ~ Name of the element, wrapped in < and >
+- Content
+  ~ Content of the element, in this example text
+  ~ But it might be another element (child element)
+  * Some elements have no content
+- Closing tag
+  ~ Same as opening tag, but with a /.
+  * When element has no content, it's omitted
+
+- copy 02-HTML-Fundamentals from the starter folder inside
+  the html-css-course-master folder and paste it anywhere,
+  in our case it's in xampp/htdocs/Build Responsive 
+  Real-World Websites with HTML and CSS
+- create index.html
+- create the basic structure of HTML
+  ~ <!DOCTYPE html>
+    o this indicates that the doctype is html
+  ~ <html></html>
+    o this is the main part of the html document/file
+    o there are two parts: head, body
+  ~ <head></head>
+    o this is the part not visible in the content
+    o stylings, title, etc.
+  ~ <body></body>
+    o this is the part of the content is displayed
+    o paragraphs, headings, etc.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Basic Language of the Web: HTML</title>
+  </head>
+  <body>
+    <h1>The Basic Language of the Web: HTML</h1>
+  </body>
+</html>
+
+* headings are used to logically divide sections apart
+- there are 6 variations of headings:
+  ~ h1
+  ~ h2
+  ~ h3
+  ~ h4
+  ~ h5
+  ~ h6
+* it is a good practice to only have 1 h1 per webpage
+
+- comments are done by using <!-- -->
+* comments are not visible in the website
+
+- the bold tag (<b></b>) can be used to bold the text
+* the bold tag is an old html tag and is not used anymore 
+  in html5 because it does not hold a semantic meaning, 
+  strong tag (<strong></strong>) is used that means to
+  focus that text
+
+- the italic tag (<i></i>) can be used to italicize text
+* the italic tag is an old html tag and is not used anymore
+  in html5 because it does not hold a semantic meaning,
+  emphasize tag (<em></em>) is used that means to emphasize
+  that text
+
+- the ordered list tag (<ol></ol>) is used for ordered list
+- the unordered list tag (<ul></ul>) is used for unordered 
+  list
+- the list item tag (<li></li>) is used for each list inside
+  an ordered / unordered list
+
+- the image tag (<img />) is used to display an image
+* there is no content in an image tag
+- we will use attributes to modify the image
+* attributes are a piece of data of the element
+  ~ src="" is the source of the image
+  ~ alt="" is the description of the image
+  * alt="" is very important and should always be included
+  ~ width="" is the width of the image
+  ~ height="" is the height of the image
+
+- we will add language attribute to html tag
+  ~ lang="" is the language used in your html document
+
+- we will add meta tag in our head sections
+  ~ meta tag (<meta />) is for the charset used in the 
+    document
+  ~ ex: <meta charset="UTF-8" />
+
+- anchor tag (<a></a>) is used for hyperlinks / links
+  ~ href attribute (href="") is the link itself
+  * href="#" is just a place holder and if clicked
+    will send you to the top of the page
+  ~ target="_blank" will open the link on a new tab
+- create blog.html file
+- link the index.html to blog.html
+
+- container elements group up the elements
+  ~ navigation tag (<nav></nav>) is used for navigation
+    part / links
+  ~ header tag (<header></header>) is used for the top
+    part
+  ~ article tag (<article></article>) is used for the main
+    content
+  ~ aside tag (<aside></aside>) is where there is a relative
+    info to the main content of the page
+  ~ footer tag (<footer></footer>) is used for the bottom
+    part
+  ~ div tag (<div></div>) is used to group up elements
+  * html entities may be used such as &copy; which is the
+    copyright sign
+  * a list of html entities are provided in this url:
+    https://codingheroes.io/resources/
+
+* samentic is the meaning
+
+- install additional extensions:
+  ~ image preview
+    o previews images
+  ~ color highlight
+    o visualizing colors in css
+  ~ auto rename tag
+    o automatically changes the name of close tag if you
+      change the name of open tag
+  ~ live server
+    o click Go Live at the very bottom to open the server
+
+* if you disabled auto close tag, enable it again in settings
+
+- create img folder and place all images inside that folder
+* easier way to get the path of image is right clicking the image
+  and select "copy relative path"
+- paste that on the src of the image tag
+- do challenge 1
+
+the complete code for index.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Basic Language of the Web: HTML</title>
+  </head>
+  <body>
+    <!--
+    <h1>The Basic Language of the Web: HTML</h1>
+    <h2>The Basic Language of the Web: HTML</h2>
+    <h3>The Basic Language of the Web: HTML</h3>
+    <h4>The Basic Language of the Web: HTML</h4>
+    <h5>The Basic Language of the Web: HTML</h5>
+    <h6>The Basic Language of the Web: HTML</h6>
+    -->
+
+    <header>
+      <h1>📘 The Code Magazine</h1>
+
+      <nav>
+        <a href="blog.html">Blog</a>
+        <a href="#">Challenges</a>
+        <a href="#">Flexbox</a>
+        <a href="#">CSS Grid</a>
+      </nav>
+    </header>
+
+    <article>
+      <header>
+        <h2>The Basic Language of the Web: HTML</h2>
+
+        <img
+          src="img\laura-jones.jpg"
+          alt="Laura Jones Profile Picture"
+          width="50"
+          height="50"
+        />
+
+        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+
+        <img
+          src="img\post-img.jpg"
+          alt="HTML code on a screen"
+          width="500"
+          height="200"
+        />
+      </header>
+
+      <p>
+        All modern websites and web applications are built using three
+        <em>fundamental</em>
+        technologies: HTML, CSS and JavaScript. These are the languages of the
+        web.
+      </p>
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
+
+      <h3>What is HTML?</h3>
+      <p>
+        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+        language that web developers use to structure and describe the content
+        of a webpage (not a programming language).
+      </p>
+      <p>
+        HTML consists of elements that describe different types of content:
+        paragraphs, links, headings, images, video, etc. Web browsers understand
+        HTML and render HTML code as websites.
+      </p>
+      <p>In HTML, each element is made up of 3 parts:</p>
+      <ol>
+        <li>The opening tag</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+
+      <p>
+        You can learn more at the
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          >MDN Web Docs</a
+        >.
+      </p>
+
+      <h3>Why should you learn HTML?</h3>
+      <p>
+        There are countless reasons for learning the fundamental language of the
+        web. Here are 5 of them:
+      </p>
+      <ul>
+        <li>To be able to use the fundamental web dev language</li>
+        <li>
+          To hand-craft beautiful websites instead of relying on tools like
+          Worpress or Wix
+        </li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun 😃</li>
+      </ul>
+
+      <p>Hopefully you learned something new here. See you next time!</p>
+    </article>
+
+    <!-- Coding Challenge #1 -->
+    <aside>
+      <h4>Related posts</h4>
+
+      <ul>
+        <li>
+          <img
+            src="img\related-1.jpg"
+            alt="Related post 1"
+            width="75"
+            height="75"
+          />
+
+          <a href="#">How to Learn Web Development</a>
+          <p>By Jonas Schmedtmann</p>
+        </li>
+        <li>
+          <img
+            src="img\related-2.jpg"
+            alt="Related post 2"
+            width="75"
+            height="75"
+          />
+
+          <a href="#">The Unknown Powers of CSS</a>
+          <p>By Jim Dillon</p>
+        </li>
+        <li>
+          <img
+            src="img\related-3.jpg"
+            alt="Related post 3"
+            width="75"
+            height="75"
+          />
+
+          <a href="#">Why JavaScript is Awesome</a>
+          <p>By Matilda</p>
+        </li>
+      </ul>
+    </aside>
+    <!--*********************-->
+
+    <footer>Copyright &copy; 2027 by The Code Magazine.</footer>
+  </body>
+</html>
+
+the complete code for blog.html:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BLOG</title>
+  </head>
+  <body>
+    <h2>BLOG</h2>
+    <a href="index.html">Home Page</a>
+  </body>
+</html>
+
+- do challenge 2
+* it is suggested to use codepen.io for this challenge
+- link where we did the challenge 2:
+  https://codepen.io/Lereias/pen/PoRjQXa
