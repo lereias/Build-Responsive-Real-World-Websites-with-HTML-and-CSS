@@ -1,0 +1,563 @@
+CSS
+- Cascading Style Sheets
+- styling the elements in the html
+- consists of countless properties: font, text, spacing,
+  layout, etc.
+
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 20px;
+}
+- snippet above is an example of a CSS Rule
+- all inside the curly brackets ({}) is the declaration
+  block
+- each line before the ";" is the declation/Style
+- before the ":" is the property
+- after the ":" up to before ";" is the value
+
+- create a copy of the previous project 
+  (02-HTML-Fundamentals) and rename it to 
+  03-CSS-Fundamentals
+
+3 ways to write CSS:
+- Inline
+  ~ writing css code inside the element
+  ~ style="" attribute
+  ~ <p style=""></p>
+  ~ usually should never be used due to separation
+    of concerns
+- Internal
+  ~ writing css code inside style tag (<style></style>)
+    inside head tag
+  ~
+  h1 {
+    color: blue;
+  }
+- External
+  ~ writing css code in a separate file (css file)
+  * usual default name is style.css
+  ~ link the file to the html file using link tag (<link />)
+    inside the head tag
+    o <link href="style.css" rel="stylesheet" />
+    * href="" is the source of the CSS file
+    * rel="" is describing what it is, this case stylesheet
+  ~ this is the best practice method to write CSS
+
+* color property is the color of the text
+* font-size property is the size of the text
+* font-size by default is set to "16px"
+* font-family property will be later discussed further
+* font-family by default is set to "serif"
+* text-transform property transforms the text (uppercase, 
+  lowercase, etc.)
+* font-style property is the style of the text (italize, 
+  etc.)
+* line-height property is the spacing between lines
+* styling the parent element will also style the child 
+  element (inheritance)
+  ~ <p><a></a></p>
+    o <p> is the parent element
+    o <a> is the child element
+* text-align property aligns the text
+
+* combining selectors to one list, separate them with a ","
+  ~ h1, h2, h3 {font-family:sans-serif}
+* descendant selector is focusing the child element in the 
+  parent element
+  ~ footer p {font-size:16px;}
+  ~ nested descendant selector
+    o article header p {font-size:20px;}
+  * descendant selector is not a good practice, better use 
+    classes and ids
+
+* comments in CSS is between /* */
+* shortcut command to comment/uncomment highlighted / 
+  selected lines is ctrl / cmd + "/"
+* class and id attribute is used to name elements
+* id cannot be used multiple times, only one element has 
+  that id
+* class can be used multiple times, multiple elements can 
+  have that class
+* it is best practice to use class instead of id
+* ids and classes having names with multiple words are 
+  separated with a "-"
+* id selectors start with #
+  ~ #author {font-style:italic;}
+* class selectors start with .
+  ~ .related-author {font-size: 18px;}
+
+* font-weight property is used to change the thickness of the text
+* list-style property is used for lists
+* list-style by default in an ordered list (<ol></ol>) is Hindu 
+  Arabic numbers
+* list-style by default in an unordered list (<ul></ul>) is bullets
+
+CSS Colors
+- RGB Model
+  ~ every color can be represented by a combination of RED, GREEN,
+    and BLUE
+  ~ each of the 3 base colors can take a value between 0 
+    and 255, which leads to 16.8 million different colors
+  * pure RED is 255,0,0
+  * pure GREEN is 0,255,0
+  * pure BLUE is 0,0,255
+  * WHITE is 255,255,255
+  * BLACK is 0,0,0
+  * YELLOW is 255,255,0
+  * CYAN is 0,255,255
+  * MAGENTA is 255,0,255
+  ~ there is two notations used
+    o RGB / RGBA notation
+      > Regular RGB Model
+        rgb(0,255,255)
+      > RGB with transparency ("alpha")
+        rgba(0,255,255,0.7)
+    o Hexadecimal notation
+      > instead of using a scale from 0 to 255, we go from
+        00 to ff (ff is 255 in hexadecimal numbers)
+        #00ffffff
+        - first two digits are for RED
+        - second two digits are for GREEN
+        - third two digits are for BLUE
+        - fourth two digits are for the transparency
+      > shorthand, when all colors are identical pairs
+        #0ff
+    * In practice, we mostly use hexadecimal colors, and
+      rgba when we need transparency
+
+  ~ shades of grey
+    o when colors in all 3 channels are the same, we get a
+      grey color
+      > rgb(0, 0, 0) / #000000 / #000
+      > rgb(3, 3, 3) / #030303
+      > rgb(69,69,69) / #444444 / #444 
+      > rgb(255,255,255)
+    o there are 256 pure grays to choose from
+      (from rgb(0, 0, 0) to rgb(255,255,255))
+  
+  * if you hover the color, the color picker will show up
+  * left-clicking the top part of the color picker will
+    change the way the color is represented
+
+  * background-color property is used to color the 
+    background
+  * border is used to do the border width, border style,
+    and border color
+    ~ border is a shorthand property that deals with
+      multiple properties
+    ~ border: 5px solid #1098ad;
+      o 5px is the border width
+      o solid is the border style
+      o #1098ad is the border color
+    ~ four variants:
+      o border-top
+      o border-bottom
+      o border-left
+      o border-right
+    
+* pseudo-class starts from the ":" after the selector
+  ~ li:first-child {font-weight: bold;}
+  * to focus on a certain child, use nth-child
+    o li:nth-child(2) {color: red;}
+      > inside the nth-child() is the place of the child
+    o li:nth-child(odd) {color: blue;}
+      > applied in odd numbers of places
+    o li:nth-child(even) {color: green;}
+      > applied in even numbers of places
+  * article p:first-child will not change the style of the
+    first <p></p> in article, rather the first element 
+    inside the article that is p
+
+styling hyperlinks
+- a:link targets the anchor tag (<a></a>) with href
+  attribute
+* text-decoration property changes the underline of the
+  link
+* text-decoration is a shorthand property that deals with
+  multiple properties: 
+  ~ text-decoration line
+  ~ text-decoration style
+  ~ text-decoration color
+  ~ text-decoration thickness
+- a:visited targets visited links
+* in practice a:link and a:visited has the same color
+- a:hover targets links that the mouse is hovering on
+- a:active targets links that the mouse is clicking
+* all pseudo-class stated should be used
+
+DevTools
+* to access devtools, right click on browser and select
+  "inspect element"
+* "Elements" shows the html document that we have done
+* "Styles" shows the style applied to the selected element
+  * user agent stylesheet is the default style applied to
+    elements
+  * when you click :hov, you can fake a pseudo-class state
+    in order for it to display the style for that state
+
+CSS THEORY #1: CONFLICTS BETWEEN SELECTORS
+
+for this case we have a paragraph element:
+<p id="author-text" class="author">blabla</p>
+
+and a css of:
+
+.author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#author-text {
+  font-size: 20px;
+}
+
+p {
+  font-family: sans-serif;
+  color: #444444;
+  font-size: 22px;
+}
+
+- there are multiple selectors selecting the same
+  element. Which one of them applies?
+- answer is all of them. All rules and properties are
+  applied!
+- but there are conflicting font-size declarations!
+  Is it 18px, or 20px, 22px?
+
+- resolving conflicting declarations
+  ~ there are priorities in applying the style
+  ~ highest to lowest priority:
+    o declarations marked with "!important"
+    o inline style (style tag in HTML)
+    o ID (#) selector
+    o Class (.) or pseudo-class (:) selector
+      > if multiple, the latest class name applies
+        - <p class="class1 class2"></p>
+          ~ any property of class2 that is the same
+            with class1 will be overwrited with what value
+            is given to the property in class2
+    o Element selector (p, div, li, etc.)
+      > if multiple, the last selector in code applies
+        - h1{text-size: 18px;} 
+          h1{text-size: 20px;}
+          ~ the last one, the most recent one, one with the
+            text-size of 20px is applied
+    o Universal selector (*)
+  * In VS Code, this is displayed in selector specificity
+    when you hover on the selector
+
+- so to answer the conflicting font-size declarations,
+  the one inside the #author-text will be applied
+
+CSS THEORY #2: INHERITANCE AND THE UNIVERSAL SELECTOR
+
+inheritance is done if the parent element is styled, the
+child element is also styled in that manner
+- 
+<p> Hello <strong>Motto</strong> </p>
+
+p {
+  text-size: 18px;
+}
+
+  ~ the text-size of 18px is applied to <p> and also to 
+    <strong>
+
+* inheritance is possible mostly with properties dealing
+  with text
+* inherited styles are overwritten with styles indicated
+  in element, class, id selectors
+
+universal selector(*) applies all styles in every element
+
+* cursor property changes the mouse cursor
+  ~ cursor: pointer;
+
+- do challenge 1
+- link to replicate:
+  https://codepen.io/jonasschmedtmann/full/zYNyMJL/256706a9de79baf1bd19abcb68e820d9
+- link where we did challenge 1:
+  https://codepen.io/Lereias/pen/LYdLmvY
+
+CSS THEORY #3: THE CSS BOX MODEL
+- CSS Box Model
+  ~ how elements are displayed
+  ~ Content
+    o Text, Images, etc.
+  ~ Border
+    o A line arround the element, still inside of
+      element
+  ~ Padding
+    o Invisible space around the content, inside of
+      the element
+  ~ Margin
+    o Space outside of the element, between elements
+  * Content, Padding, and Border are the visible part
+    on the page
+  * Fill area is an area that gets filled with background
+    color or background image
+  * Fill area affects the Content and Padding
+
+  ~ Final element width
+    o left border + left padding + width + right padding
+      + right border
+  ~ Final element height
+    o top border + top padding + height + bottom padding
+      + bottom border
+  * We can specify all these values using CSS properties
+  * This is the default behavior, but we can change it
+
+* padding property is used for the padding of the element
+  * padding has many variants:
+    o padding-top
+    o padding-bottom
+    o padding-left
+    o padding-right
+* padding is a shorthand property which deals with multiple
+  properties
+  ~ padding: 10px;
+    o applies a padding to all sides with 10px
+  ~ padding: 10px 20px;
+    o applies a padding to top-bottom with 10px
+    o applies a padding to left-right with 20px
+  ~ padding: 1px 2px 3px 4px;
+    o applies the indicated values in a clock-wise
+      direction
+    o 1px to the top
+    o 2px to the right
+    o 3px to the bottom
+    o 4px to the left
+
+* margin property is used for the margin of the element
+  * margin has many variants:
+    o margin-top
+    o margin-bottom
+    o margin-left
+    o margin-right
+* margin is a shorthand property which deals with multiple
+  properties
+  ~ margin: 10px;
+    o applies a margin to all sides with 10px
+  ~ margin: 10px 20px;
+    o applies a margin to top-bottom with 10px
+    o applies a margin to left-right with 20px
+  ~ margin: 1px 2px 3px 4px;
+    o applies the indicated values in a clock-wise
+      direction
+    o 1px to the top
+    o 2px to the right
+    o 3px to the bottom
+    o 4px to the left
+
+* it is advised that you reset the margin and padding value
+  of all elements using the universal selector(*)
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+* by resetting the margin and padding, ordered list
+  (<ol></ol>) and unordered list (<ul></ul>) will lose
+  its numbers and bullets, we need space on the left to
+  have them
+
+* collapsing margin
+  - if two margins occupy same space (ex: margin-bottom 
+    and margin-top), the one with the highest value is
+    applied
+
+Adding dimensions
+* width property is used to change the width of the 
+  content of the element
+* height property is used to change the height of the
+  content of the element
+* setting the value of width / height to "auto" will
+  adjust to the other property in order to get the
+  original aspect ratio of the content / img
+* setting the value of width / height to a "%" will
+  take the "%" of the width / height of the parent
+  element, not necessarily the page
+* margins cannot be applied to small elements such as
+  anchor tags (<a></a>)
+
+Centering Our Page
+* enclose all of your body in a container element like
+  div
+* margin-left: auto and margin-right: auto will
+  automatically make the margin on the left and right
+  the same value
+
+- do challenge #2
+- the link that we will immitate the page:
+  https://codepen.io/jonasschmedtmann/pen/oNBJQOr/bc1ffc43d2c2d6dfb311d99f974ec991
+- the link that we done the challenge:
+  https://codepen.io/Lereias/pen/dymRgWp
+
+CSS THEORY #4: TYPES OF BOXES
+
+Inline Boxes / Inline Elements
+- Content covers the entire space that the element needs
+
+- occupies only the space necessary for its content
+- causes no line-breaks after or before the element
+- box model applies in a different way: heights and widths
+  do not apply
+  ~ change in margin (top-bottom) is displayed 
+    but will not apply to the Inline Elements
+  ~ change in padding is done but no real space is created
+- Paddings and margins are applied only horizontally
+  (left-right)
+- Default elements:
+  ~ a
+  ~ strong
+  ~ em
+  ~ button
+  ~ etc.
+- With CSS:
+  ~ display: inline
+
+Block Boxes / Block-Level Elements
+- The entire element covers as much space that it needs
+- takes all space horizontally
+
+- visually as blocks
+- occupy 100% of parent element's width, no matter the
+  content
+- are stacked vertically by default, one after another
+- box-model applies as showed
+- Default elements:
+  ~ body
+  ~ main 
+  ~ header
+  ~ footer
+  ~ section
+  ~ nav
+  ~ aside
+  ~ div
+  ~ h1-h6
+  ~ p
+  ~ ul
+  ~ ol
+  ~ li
+  ~ etc.
+- With CSS:
+  ~ display: block
+
+Inline-Block Boxes
+- Looks like inline from the outside, behaves like
+  block-level on the inside
+- occupies only content's space
+- causes no line-breaks
+- css box model applies as showed
+  * you can add margin and padding for vertical
+    (top-bottom)
+- Default elements:
+  ~ img
+- display: inline-block
+
+* you can have multiple pseudo classes (:)
+
+CSS THEORY #5: ABSOLUTE POSITIONING
+
+Normal Flow
+- default positioning
+- element is "in flow"
+- elements are simply laid out according to their order
+  in the HTML code
+- position: relative
+
+Absolute positioning
+- element is removed from the normal flow: "out of flow"
+- no impact on surrounding elements, might overlap them
+- we use top, bottom, left, or right to offest the
+  element from its relatively positioned container
+- position: absolute
+* by default, the viewport (the initial
+  visible part of the webpage) is followed for its 
+  positioning
+* in order for the positioning to be followed on the
+  container/element, make it position: relative
+* giving the top, right, bottom, left property a
+  negative value, it will go to the other way that it
+  should go
+
+* to access emojis for windows do "win + ." and for
+  mac is "ctrl + cmd + space"
+
+PSEUDO ELEMENTS
+- elements that don't exist in html but can still be
+  selected and styled with CSS
+- denoted with "::"
+- h1::first-letter {}
+
+sibling element
+- elements that is inside the same parent element
+* h3 and p are inside article. They are sibling to one
+  another
+
+adjacent sibling element
+- the sibling element next to the element
+
+adjacent element selector / adjacent sibling selector
+- indicate with "+"
+* h3 + p targets the p next to h3
+
+after and before pseudo elements
+
+after pseudo elements 
+- creates a pseudo element after the selected element
+- creates a pseudo element that is the last child of
+  the selected element
+
+before pseudo elements
+- creates a pseudo element before the selected element
+- creates a pseudo element that is the first child of
+  the selected element
+
+* any pseudo element is an inline element by default
+
+DEVELOPER SKILL #1: GOOGLING AND READING DOCUMENTS
+* it is not needed to memorize each and everything in
+  CSS, you may search for it
+* great site to check
+  ~ css-tricks.com
+  ~ stackoverflow.com
+  ~ developer.mozilla.org (MDN Documentation)
+
+DEVELOPER SKILL #2: DEBUGGING AND ASKING QUESTIONS
+* Bug is an error in the code]
+
+* common bug in HTML is the absence of closing tag
+* you can use html validator:
+  https://validator.w3.org
+  * enable your cloudfare WARP or make your IP 1.1.1.1
+    to access the site
+* you can use diffchecker to check the difference of
+  two files:
+  https://www.diffchecker.com
+  * use the files inside the starter coding files
+    inside the final folder for the original text
+    and use your code for the changed text
+
+* common bug in CSS is conflicting selectors
+* another common bug is incorrectly linking the css
+  file
+* devtools (select inspect element) is used to solve
+  bugs in CSS
+* you can use diffchecker to check the difference of
+  two files:
+  https://www.diffchecker.com
+  * use the files inside the starter coding files
+    inside the final folder for the original text
+    and use your code for the changed text
+
+* if the problem still occurs, ask a question
+
+- do challenge # 3
+- link that we need to replicate:
+  https://codepen.io/jonasschmedtmann/full/dyNwwGP/7a64f0845fd4f6439b63203371edbcb1
+- link that we did the challenge #3:
+  https://codepen.io/Lereias/pen/ZExJzKP
+* start with content, then padding, then border, then margin   

@@ -4,6 +4,9 @@ Resources are downloaded:
 - lecture notes
 - sample code
 
+Check this resource website instructor has given:
+https://codingheroes.io/resources/
+
 High-Level Overview of Web Development
 - Static Website
   * Website where files are simply sent to browser as they are

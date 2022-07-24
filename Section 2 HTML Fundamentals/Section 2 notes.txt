@@ -309,5 +309,7 @@ the complete code for blog.html:
 
 - do challenge 2
 * it is suggested to use codepen.io for this challenge
+- link that we need to replicate:
+  https://codepen.io/jonasschmedtmann/pen/ZELVmJX/48f20ea036df9afc09978b07eca226b8
 - link where we did the challenge 2:
   https://codepen.io/Lereias/pen/PoRjQXa
