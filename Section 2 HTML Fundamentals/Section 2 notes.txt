@@ -136,8 +136,8 @@ HTML Element
 * if you disabled auto close tag, enable it again in settings
 
 - create img folder and place all images inside that folder
-* easier way to get the path of image is right clicking the image
-  and select "copy relative path"
+* easier way to get the path of image is right clicking the
+  image file and select "copy relative path"
 - paste that on the src of the image tag
 - do challenge 1
 

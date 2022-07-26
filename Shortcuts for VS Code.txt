@@ -1,0 +1,19 @@
+* to do a basic html structure, type "!" and press tab /
+  enter
+
+* easier way to get the path of image is right clicking 
+  the image file and select "copy relative path"
+
+* shortcut command to comment/uncomment highlighted / 
+  selected lines is ctrl / cmd + "/"
+  
+* to access emojis for windows do "win + ." and for
+  mac is "ctrl + cmd + space"
+
+* typing lorem in VS Code will create dummy words
+
+* shortcut to move a line down for windows is "alt +
+  downarrowkey"
+
+* shortcut to move a line up for windows is "alt +
+  uparrowkey"

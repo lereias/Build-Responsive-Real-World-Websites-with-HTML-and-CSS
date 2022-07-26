@@ -1,0 +1,444 @@
+Layout
+- way text, images, and other content is placed and
+  arranged on a webpage
+- gives the page a visual structure into which we place
+  our content
+- building a layout
+  ~ arranging page elements into a visual structure,
+    instead of simply having them placed one after another
+    (normal flow)
+
+Types:
+Page Layout
+- how the page elements are placed
+Component Layout
+- components themselves have a layout
+
+The 3 ways of building layouts
+- Float Layouts
+  ~ the old way of building layouts of all sized, using
+    the float CSS property
+  ~ Still used, but getting outdated fast
+- Flexbox
+  ~ modern way of laying out elements in a 1-dimensional
+    row without using floats
+  ~ perfect for component layouts
+- CSS Grid
+  ~ For laying out element in a fully-fledged
+    2-dimensional grid
+  ~ Perfect for page layouts and complex components
+
+FLOATS
+- float property
+  ~ float: left
+  ~ float: right
+* float elements are out of the flow like absolute
+  positioned elements
+* collapsing elements / heights
+  - phenomena when elements loses its heights such as
+    when its content / child elements became floats
+
+- element is removed from the normal flow: "out of flow"
+- text and inline elements will wrap around the floated
+  element
+- the container will not adjust its height to the
+  element
+
+
+* typing lorem in VS Code will create dummy words
+* shortcut to move a line down for windows is "alt +
+  downarrowkey"
+* shortcut to move a line up for windows is "alt +
+  uparrowkey"
+
+CLEARING FLOATS
+* clear property only works with block elements
+
+one way is:
+- add another element in the parent element
+  ~ add a empty div
+    o <div class="clear"></div>
+- add the clear property to that div
+  * clear property has values: left, right, both
+  ~ .clear {clear: both}
+- the parent element is now fixed
+
+* this way is not a good practice because we do not want
+  to fill our html document with empty divs
+
+clear-fix hack
+- mostly widely used way to clear floats
+- add the class clearfix to the parent element
+- do this css rule
+  ~ .clearfix::after {
+    content:""; 
+    clear: both; 
+    display block;
+    }
+
+* it is a good practive to add some background-color to
+  containers to track the overall space that the container
+  is using
+
+BOX-SIZING: BORDER-BOX
+* default  way of box model is when two floats has more 
+  width than the parent element, the right one will be 
+  place lower
+
+- to solve this, use this property:
+  ~ box-sizing: border-box
+  ~ the final element width is the width
+  ~ the final element height is the height
+  * the default value of box-sizing is content-box which
+    follows the default css box model
+  * if we indicate some padding and border, it will
+    deduct the width of the content
+
+
+- do challenge #1
+- the link that we need to replicate:
+  https://codepen.io/jonasschmedtmann/full/eYgbXrV/1a12771af64312342aa5a5f45bd2347c
+- the link that we did the challenge:
+  https://codepen.io/Lereias/pen/PoRKzxg
+
+
+INTRODUCTION TO FLEXBOX
+* copy the css-grid.html and flexbox.html in the starter
+  folder in the resource download
+- apply display: flex on the container you wish to make
+  a flexbox
+* the elements inside the flex container is the flex 
+  items
+* the width of the flex items is the total necessary
+  space for its content
+* the height of the flex items depends on the highest
+  height of the flex items
+  ~ lets say p and h1 is in a flex item
+    o p {height: 150px;} h1 {height:40px;}
+    o the height of h1 will be 150px rather than 40px
+
+* align-items property align the flex items vertically
+* align-items property is applied to the flex container
+* align-items by default has a value of stretch
+* other values are:
+  ~ center
+    o vertically center the flex items on the flex
+      container
+  ~ flex-start
+    o places the flex items to the very top of the flex
+      container
+  ~ flex-end
+    o places the flex items to the very bottom of the
+      flex container
+
+* justify-content property align the flex items 
+  horizontally
+* justify-content property is applied to the flex
+  container
+* justify-content by default has a value of flex-start
+* other values are:
+  ~ center
+    o horizontally center the flex items on the flex
+      container
+  ~ space-between
+    o the remaining available space of the container
+      will be divided and put between the flex items
+  ~ others 
+
+Flexbox
+- set of related CSS properties for building 1-dimensional
+  layouts
+- main idea behind flexbox is that empty space inside a
+  container element can be automatically divided by its
+  child elements
+- makes it easy to automatically align items to one
+  another inside a parent container, both horizontally
+  and vertically
+- solves common problems such as vertical centering and
+  creating equal-height columns
+- perfect for replacing floats, allowing us to write
+  fewer and cleaner HTML and CSS code
+
+Flexbox terminology
+- flex container
+  ~ container that has display: flex
+- flex items
+  ~ elements inside the flex container
+- main axis
+  ~ the horizontal axis
+- cross axis
+  ~ the vertical axis
+
+Flex Container properties
+- gap: 0 | <length>
+  ~ to create space between items, without using margin
+- justify-content: flex-start | flex-end | center | 
+  space-between | space-around | space-evenly
+  ~ to align items along main axis (horizontally, by
+    default)
+- align-items: stretch | flex-start | flex-end | center |
+  baseline
+  ~ to align items along cross axis (vertically, by 
+    default)
+- flex-direction: row | row-reverse | column |
+  column-reverse
+  ~ to define which is the main axis
+
+* the following properties are more advanced
+- flex-wrap: nowrap | wrap | wrap-reverse
+  ~ to allow items to wrap into a new line if they are
+    too large
+- align-content: stretch | flex-start | flex-end |
+  center | space-between | space-around
+  ~ only applies when there are multiple lines
+    (flex-wrap: wrap)
+
+Flex Items properties
+- align-self: auto | stretch | flex-start | flex-end |
+  center | baseline
+  ~ to overwrite align-items for individual flex items
+- flex-grow : 0 | <integer>
+  ~ to allow an element to grow (0 means no, 1+ means 
+    yes)
+- flex-shrink: 1 | <integer>
+  ~ to allow an element to shrink (0 means no, 1+ means
+    yes)
+- flex-basis: auto | <length>
+  ~ to define an item's width, instead of the width
+    property
+- flex: 0 1 auto | <int> <int> <len>
+  ~ Recommended shorthand for flex-grow, -shrink, -basis
+- order: 0 | <integer>
+  ~ controls order of items. -1 makes item first, 1 makes
+    it last
+
+
+flex property
+- flex-grow
+  * 0 is the default
+  * grow / fills the remaining available space in the flex
+    container t0 the flex item/s
+- flex-shrink
+  * 1 is the default
+  * shrinks the flex items in order to fit inside the
+    flex container
+  * make 0 to disable it
+- flex-basis
+  * auto is the default
+  * change the width of the flex item
+
+* always use the shorthand property flex
+
+
+- do challenge #2
+- link that we need to replicate:
+  https://codepen.io/jonasschmedtmann/pen/MWJZZQL/c8e97f50f726b8e57ff58068647cde00
+- link that we did the challenge:
+  https://codepen.io/Lereias/pen/rNdzjMx\
+
+* display: none; will not display the element anymore
+
+
+INTRODUCTION TO CSS GRID
+- the most modern way to layout your webpage
+- applied to page layouts
+- 2-dimensional layouting
+
+- display: grid;
+- basic properties:
+  ~ grid-template-columns
+    o sets how many columns is the grid items displayed
+      as
+    o it creates as many rows as possible
+    o grid-template-columns: 100px 200px 300px; there are
+      10 grid items
+      > we have 3 columns
+      > first column has a width of 100px
+      > second column has a width of 200px
+      > third column has a width of 300px
+      > 10 grid items we will have 4 rows
+  ~ grid-template-rows
+    o sets the height of the grid items per row
+    o grid-template-rows: 200px 100px;
+      > sets the height of all items in the first row
+        as 200px
+      > sets the height of all items in the second row
+        as 100px
+  ~ gap
+    o will create space between columns and rows
+    o gap: 20px;
+      > creates 20px space between columns
+      > creates 20px space between rows
+  ~ column-gap
+    o will create space between columns
+  ~ row-gap
+    o will create space between rows
+
+CSS Grid
+- set of CSS properties for building 2-dimensional layouts
+- main idea behind CSS Grid is that we divide a container
+  element into rows and columns that can be filled with
+  its child elements
+- allows us to write less nested HTML and easier-to-read
+  CSS
+- not meant to replace flexbox! Instead, they work
+  perfectly together. Need a 1D layout? Use flexbox.
+  Need a 2D layout? Use CSS Grid.
+
+CSS Grid Terminology
+- Grid container
+  ~ an element that has display: grid
+- Grid items
+  ~ elements inside a grid container
+- Column Axis
+  ~ axis of the column
+- Row Axis
+  ~ axis of the row
+* you cannot change the direction of the column and row
+  axis
+- Grid lines
+  ~ the numbers that have the value either:
+    o number of columns + 1
+      > number of grid lines in the column
+    o number of rows + 1
+      > number of grid lines in the row
+- Grid cell
+  ~ might be filled by a grid item or not
+- Gutters
+  ~ gaps
+- Grid track
+  ~ row or the column
+
+Grid Container properties
+- grid-template-rows: <track size>*
+- grid-template-columns: <track size>*
+  ~ these two properties establish the grid row and
+    column tracks. One length unit for each track. Any
+    unit can be used, new fr fills unused space
+
+- gap: 0 | <length>
+  ~ row-gap: 0 | <length>
+  ~ column-gap: 0 | <length>
+  ~ to create empty space between tracks
+
+- justify-items: stretch | start | center | end
+- align-items: stretch | start | center | end
+  ~ these two properties align items inside rows /
+    columns (horizontally / vertically)
+
+* next properties only apply if grid is smaller than
+  grid container
+- justify-content: start | start | center | end | ...
+- align-content: start | start | center | end | ...
+  ~ these two properties align entire grid inside grid
+    container
+  * only applies if container is larger than the grid
+  * the grid is the total width of grid-template-columns
+    + column-gap and total height of grid-template-rows
+    + row-gap
+
+Grid Items properties
+- grid-column: <start line> / <end line> | span <number>
+- grid-row: <start line> / <end line> | span <number>
+  ~ these two properties place a grid item into a specific
+    cell, based on line numbers
+  ~ span keyword can be used to span an item across more
+    cells
+
+- justify-self: stretch | start | center | end
+- align-self: stretch | start | center | end
+  ~ these two properties overwrite justify-items /
+    align-items for single items
+
+* fr stands for fractional / fraction
+* fr takes the unused space in the container
+* fr behaves like flex-grow
+* if height is not given to the grid container, the value
+  of fr is the highest height among the grid items
+* if height is given to the grid container, and a grid
+  item also has a height, fr value of that grid item will
+  be the same height to the height of the grid item
+* setting value to auto in grid-template-columns will set
+  the column to the only needed space to fit the content
+* setting value to auto in grid-template-rows will set
+  the grid item height to the only needed space to fit
+  the content
+* css grid created the repeat function (repeat())
+  ~ this sets the amount of columns / rows
+  ~ grid-template-columns: repeat(4, 1fr)
+    o there are 4 columns with a width of 1fr
+  ~ grid-template-rows: repeat(2, 1fr)
+    o the grid items per row (2 rows) will have a height 
+      of 1fr
+
+* explicit rows are rows that filled the amount of
+  columns dictated in grid-template-columns
+* implicit rows are rows that does not fill the amount
+  of columns dictated in grid-template-columns
+
+
+Placing and Spanning Grid Items
+* access the devtools (select inspect element)
+* the grid container will have a grid button beside it,
+  press it
+* grid line numbers will show up after
+- grid-column: <start line> / <end line>
+  ~ aligns the grid item to the stated start column grid 
+    line and end column grid line
+- grid-row: <start line> / <end line>
+  ~ aligns the grid item to the stated start row grid 
+    line and end row grid line
+* placing the grid item to a grid cell where there is
+  already a grid item there will not swap its grid cell
+  with the grid item that we are changing its grid cell
+  position
+* if the end line is only + 1 of the start line, you
+  may ommit it
+  ~ grid-column: 1 / 2; => grid-column: 1;
+  ~ grid-row: 1 / 2; => grid-row: 1;
+* if the end line is more than +1 of the start line, it
+  will span up to that end line;
+  ~ grid-column: 1 / 3;
+    o spans the grid item to 2 columns rightward
+    * if said end line does not yet exist, it will
+      create it
+  ~ grid-row: 1 / 3;
+    o spans the grid item to 2 rows downward
+    * if said end line does not yet exist, it will
+      create it
+
+  * we can also use the span <no of columns/rows>
+  ~ grid-column: 1 / span 2;
+    o spans the grid item to 2 columns rightward
+    * if said column does not yet exist, it will
+      create it
+  ~ grid-row: 1 / span 2;
+    o spans the grid item to 2 rows downward
+    * if said row does not yet exist, it will
+      create it
+
+  * grid-column: 1 / -1;
+    o will span up until the last column grid line of 
+      the grid container
+  * grid-row: 1 / -1;
+    o will span up until the last row grid line of the
+      grid container
+
+* if grid items has the same grid-column and grid-row,
+  the grid items will have the same grid cell, meaning
+  they will stack each other
+  * the front-most grid item is the grid item that is
+    the last-child / closest to the last-child
+  * the back-most grid item is the grid item that is
+    the first-child / closest to the first-child
+  * the back-most is the only grid item that is Still
+    "on flow" - normal flow, other grid items will be
+    "out of flow"
+
+  
+- do challenge#3
+- the link that we will replicate:
+  https://codepen.io/jonasschmedtmann/full/wvgREqP/ddc3ec3843c753ee03e9525df6c4a1f1
+- the link that we did the challenge:
+  https://codepen.io/Lereias/pen/mdxMqJX
+  
