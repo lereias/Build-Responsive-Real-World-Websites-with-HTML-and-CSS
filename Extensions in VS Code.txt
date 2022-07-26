@@ -1,0 +1,11 @@
+* Prettier
+  ~ THE BEST FORMATTER
+* Auto Rename Tag
+  ~ renames the closing tag if you rename the opening tag
+* Color Highlight
+  ~ highlights the color with the color that it represents
+* Image preview
+  ~ previews the image that you used
+* Live server
+  ~ you can run your html codes in a local by pressing "Go 
+    Live" at the bottom right

@@ -1,0 +1,881 @@
+* there is a section container element, use for sections
+* there is a span element which is a generic inline
+  element
+* blockquote element is used for quotations / testimonials
+* there is a figure element that is said to be used if
+  entire thing is part of the normal flow
+  * figure element is commonly used for product cards
+
+WEB DESIGN VS. DEVELOPMENT
+- Web designers create the overall look and feel of a
+  website
+- Web developers implement the design using HTML, CSS,
+  and JavaScript code
+* GOAL IS TO BE BOTH DESIGNER AND DEVELOPER
+
+Why take design seriously?
+
+Good design
+- creates an immediate and lasting good impression of
+  the brand or product
+- makes the user trust the brand right away
+- increases the user's perceived value of the brand or
+  product
+- gives users exactly what they were looking for when
+  coming to the site, e.g. purchasing a product or
+  finding information
+
+Bad design
+- makes users believe the brand doesn't really care about
+  their product or service
+- makes the user insecure about trusting the brand
+- makes the brand or product seem "cheap"
+- leaves users confused, and makes it hard for them to
+  reach their goal
+
+Anyone can learn good design!
+- good web design is not subjective or creative
+- everyone can learn basics by following a framework /
+  system
+* instructor (Jonas Schmedtmann) learned and deconstructed
+  100s of well-designed sites
+* it is distilled into easy-to-learn and easy-to-apply
+  rules
+* divided in 9 different areas of design
+  ~ ingredients
+* rules will be applied based on website personality
+
+Web Design Ingredients you will learn about
+1. Typography
+2. Colors
+3. Images / illustrations
+4. Icons
+5. Shadows
+6. Border-radius
+7. Whitespace
+8. Visual Heirarchy
+9. User Experience
+10.Components / Layout
+* design decisions for each ingredient are based on
+  website personality
+
+Website Personalities
+1. Serious / Elegant
+   ~ for luxury and elegance, based on thin serif
+     typefaces, golder or pastel colors, and big
+     high-quality images
+2. Minimalist / Simple
+   ~ Focuses on the essntial text content, using small
+     or medium-sized sans-serif black text, lines, and
+     few images and icons
+3. Plain / Neutral
+   ~ design that gets out of the way by using neutral and
+     small typefaces, and a very structured layout
+   ~ Common in big corporations
+4. Bold / Confident
+   ~ makes an impact, by featuring big and bold typography,
+     paired with confident use of big and bright colored
+     blocks
+5. Calm / Peaceful
+   ~ For products and services that care, transmitted by
+     calming pastel colors, soft serif headings, and
+     matching images / illustrations
+6. Startup / Upbeat
+   ~ widely used in startups, featuring medium-sized
+     sans-serif typefaces, light-grey text and backgrounds,
+     and rounded elements
+7. Playful / Fun
+   ~ colorful and round designs, fueled by creative
+     elements like hard-drawn icons or illustrations,
+     animations, and fun language
+
+
+TYPOGRAPHY
+- typography is the art and technique of arranging type
+  to make written language legible, readable, and
+  appealing when displayed. - Wikipedia
+- serif
+  ~ has serifs that look like some tails
+  ~ conveys trustworthiness
+  ~ good for long text
+- sans-serif
+  ~ no serifs
+  ~ clean and simple
+  ~ easier to choose for beginner designer
+
+Rules:
+- use only good and popular typefaces and play it safe
+
+* all fonts are available in:
+  ~ Google Fonts
+  ~ Font Squirrel
+
+Sans-serif
+- Inter
+- Open Sans
+- Roboto
+- Montserrat
+- Work Sans
+- Lato
+
+Serif
+- Merriweather
+- Aleo
+- Playfair Display
+- Cormorant
+- Cardo
+- Lora
+
+- it's okay to use just one typeface per page! If you
+  want more, limit to 2 typefaces.
+- choose the right typeface according to your website
+  personality:
+  ~ choose the right personality for your website
+    (more on this later)
+  ~ decide between a serif and sans-serif typeface
+  ~ experiment with all the "good" typefaces (and other
+    typefaces from Google Fonts!) to see which ones best
+    fits your website's message (this will come with
+    experience)
+  ~ you can keep trying different typefaces as you design
+    and build the page
+
+- when choosing font-sizes, limit choices! Use a "type
+  scale" tool or other pre-defined range
+  * good tool for creating your type scales is:
+    https://type-scale.com/
+- use a font size between 16px and 32px for "normal" text
+- for long text (like a blog post), try a size of 20px
+  or even bigger
+- for headlines, you can go really big (50px+) and bold
+  (600+), depending on personality
+- for any text, don't use a font weight under 400 (regular)
+
+- use less than 75 characters per line
+- for normal-sized text, use a line height between 1.5
+  and 2. For big text, go below 1.5
+  ~ the smaller or longer the text, the larger the line
+    height needs to be!
+- decrease letter spacing in headlines, if it looks
+  unnatural (this will come from experience)
+- experiment with all caps for short titles. Make them
+  small and bold and increase letter-spacing
+- usually, don't justify text
+- don't center long text blocks. Small blocks are fine
+
+
+- proceed to the chair project
+* for architect minimalist its best use sans-serif, more
+  specifically inter
+- search google fonts and search for inter:
+  https://fonts.google.com/
+* Styles are the different font-weight versions of the
+  text
+* copy and paste the link tags presented before the CSS
+  styles in the head tag
+* in the body do:
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  * the font-family that is the left-most will be applied
+    and in cases that it is not available, the next one
+    will be applied
+
+
+COLORS
+
+Rules:
+- make the main color match your website's personality:
+  colors convey meaning!
+  ~ RED draws a lot of attention, and symbolizes power,
+    passion, and excitement
+  ~ ORANGE is less aggresive, and conveys happiness,
+    cheerfulness, and creativity
+  ~ YELLOW means joy, brightness, and intelligence
+  ~ GREEN represents harmony, nature, growth, and health
+  ~ BLUE is associated with peace, trustworthiness, and
+    professionalism
+  ~ PURPLE conveys wealth, wisdom, and magic
+  ~ PINK represents romance, care, and affection
+  ~ BROWN is associated with nature, durability and
+    comfort
+  ~ BLACK symbolizes power, elegance and minimalism, but
+    also grief and sorrow
+
+- good color tone! Don't choose a random tone or CSS named
+  colors
+  * tools that can be used are the following:
+    o Open Color
+      > https://yeun.github.io/open-color/
+    o tailwindcss
+      > https://tailwindcss.com/docs/customizing-colors
+    o FLAT UI COLORS 2
+      > https://flatuicolors.com/
+
+- you need at least two types of colors in your color
+  palette: a main color and a grey color
+  * grey color is not actually color grey, just a darker
+    color
+
+- with more experience, you can add more colors: accent
+  (secondary) colors (use a tool)
+- for diversity, create lighter and darker "versions"
+  * lighter "versions" are called tints
+  * darker "versions" are called shades
+  * tools that can be used are the following:
+    o Open Color
+      > https://yeun.github.io/open-color/
+    o tailwindcss
+      > https://tailwindcss.com/docs/customizing-colors
+    o palleton
+      > https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
+    o coolors
+      > https://coolors.co/
+    o tint & shade generator
+      > https://maketintsandshades.com/
+
+- use your main color to draw attention to the most
+  important elements on the page
+  * mostly used on buttons
+- use colors to add interesting accents or make entire
+  components or sections stand out
+- you can try to use your color strategically in images
+  and illustrations
+
+Colors and Typography
+- on dark colored backgrounds, try to use a tint of the
+  background ("lighter version") for text
+- text should usually not be completely black. Lighten
+  it up if it looks heavy and uninviting
+- don't make text too light! Use a tool to check contrast
+  between text and background colors
+  * contrast ratio needs to be at least 4.5:1 for normal
+    text and 3:1 for large text (18px+)
+    * use coolors for that (color contrast checker)
+
+* links are used if you are navigated elsewhere, out of
+  the current page
+* buttons are used if there is something have taken action
+  after pressing it
+* create a major classname for the same element and create
+  classnames more specific to it for its variations
+
+- apply this to the chair project
+
+IMAGES AND ILLUSTRATIONS
+
+Types of images
+- product photos
+  ~ for products
+- storytelling photos
+  ~ users using your product
+  ~ visually tells your message
+  ~ most important and prominent among them all
+- illustrations
+  ~ getting more and more popular
+  ~ abstract way of doing story-telling
+  ~ adds originality and personality
+  ~ can be 2D or 3D
+- patterns
+  ~ applied as background or behind images
+
+- use images to support your website's message and story.
+  So only use relevant images!
+- prefer original images. If not possible, use
+  original-looking stock images (not generic ones!)
+  * places to get images:
+    o Unsplash
+      > https://unsplash.com/
+    o Pexels
+      > https://www.pexels.com/
+    o DrawKit
+      > https://drawkit.com/
+    o unDraw
+      > https://undraw.co/illustrations
+
+- try to show real people to trigger user's emotions
+- if necessary, crop images to fit your message
+- experiment combining photos, illustrations and patterns
+
+Handling text on images
+- method#1: darken or brighten image (completely or
+  or partially, using a gradient)
+- method#2: position text into neutral image area
+- method#3: put text in a box
+- method#4: put text-shadow on text
+
+Some technical details
+- to account for high-res screens, make image dimensions
+  2x big as their displayed size
+  ~ Scale factor
+    o actual pixels the screen contains / Pixels
+      represented on screen
+    o on high-res screens, scale factor is 2x or even 3x,
+      on "normal" screens it's just 1x (1 physical pixel
+      = 1 design pixel)
+
+- compress images for a lower file size and better
+  performance
+  * tools that can be used:
+    o Squoosh
+      > https://squoosh.app/
+
+- when using multiple images side-by-side, makes sure they
+  have the exact same dimensions
+
+
+ICONS
+
+Rules:
+- use a good icon pack, there are a tons of free and paid
+  icon packs
+  * tools to have icons:
+    o Phosphor icons
+      > https://phosphoricons.com/
+    o Ionicons
+      > https://ionic.io/ionicons
+    o ICONS8
+      > https://icons8.com/
+    o heroicons
+      > https://heroicons.com/
+  * you can use emojis as well
+
+- use only one icon pack. Don't mix icons from different
+  icon packs
+- use SVG icons or icon fonts. Don't use bitmap image
+  formats (.jpg and .png)!
+  * Vector-based
+    ~ SVG images and icon fonts
+    ~ scale indefinitely!
+  * Bitmap
+    ~ "Regular images": JPG, PNG, GIF
+    ~ Do not scale, become unsharp!
+
+- adjust to website personality! Roundness, weight and
+  filled / outlined depend on typography
+
+When to use icons
+- use icons to provide visual assistance to text
+- use icons for product feature blocks
+- use icons associated with actions, and label them
+  (unless no space or icon is 100% clear)
+- use icons as bullet points
+
+Use icons well
+- to keep icons neutral, use same color as text. To draw
+  more attention, use different color
+- don't confuse your users: icons need to make sense and
+  fit the text or action!
+- don't make icons larger than what they were designed
+  for. If needed, enclose them in a shape
+
+- do the chair project, apply icons
+* svg images are svg elements (<svg></svg>)
+* they have default classes in them, you can change them
+  to whatever you desire
+  ~ properties involved with svg elements:
+    o stroke
+      > color of the line of the svg
+    o fill
+      > color of the fill of the svg
+    o width / height
+      > change dimension of svg
+
+* there is a trick that you can have multiple cursors
+  in VS Code
+  * for windows, use alt key and click the line
+  * for mac, use cmd key and click the line
+
+
+SHADOWS
+
+Some CONCEPTS First
+- Skeuomorphic Design
+  ~ 2010
+  ~ glossy, shadows, realistic
+- Flat Design (Minimal)
+  ~ no shadows
+- Flat Design (2.0)
+  ~ shadows is back but not much realistic
+
+- after an era of 100% flat design, we're now back to
+  using shadows in UI design ("flat design 2.0")
+- shadows creates depth (3D): the more shadow, the further
+  away from the interface the element is
+- shadow can be used on boxes and text
+
+Rules:
+- you don't have to use shadows! Only use them if it makes
+  sense for the website personality
+* From Serious / Elegant -> Playful / Fun
+  ~ Serious / Elegant has less shadows
+  ~ Playful / Fun has more shadows
+- use shadows in small doses: don't add shadows to every
+  element!
+- go light on shadows, don't make them too dark!
+
+Use shadows in the right situation
+- use small shadows for smaller elements that should stand
+  out (to draw attention)
+  * buttons and icons / icon backgrounds
+- use medium-sized shadows for larger areas that should
+  stand out a bit more
+  * make cards stand out from the interface
+- use large shadows for elements that should really float
+  above the interface
+  * navigations and pop-ups
+- experiment with changing shadows on mouse interaction
+  * mouse-click
+    ~ normal
+      o no shadow
+    ~ hover
+      o has shadow
+    ~ click
+      o no shadow
+- Bonus: Experiment with glows (colored shadows)
+
+- implement shadows to the chair project
+- box-shadow property is the way we create shadows for
+  boxes / containers
+  * box-shadow property has multiple values:
+    o box-shadow: 10px 10px 10px 10px #000
+      > first value is for the horizontal off-set
+      > second value is for the vertical off-set
+      > third value is the blur
+      > fourth value is the spread (optional)
+      > fifth value is the color (optional)
+
+* the best opacity of shadow (transparency / alpha) is 
+  0.1
+
+- text-shadow property is the way we create shadows for
+  text
+  * text-shadow property has multiple values:
+    o text-shadow: 10px 10px 10px #000
+      > first value is for the horizontal off-set
+      > second value is for the vertical off-set
+      > third value is the blur
+      > fourth value is the color (optional)
+
+* In VS Code, hover on the property on the css rules and 
+  click the "MDN Web Docs" to redirect to the documentation
+  of the property
+
+* learn more on mdn web docs:
+  ~ https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  ~ https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+* you can add multiple shadows for one box / container
+  or one text
+
+
+BORDER-RADIUS
+- the roundness of corners
+
+Rules:
+- use border-radius to increase the playfulness and fun of
+  the design, to make it less serious
+  * From Serious / Elegant => Playful / Fun
+    ~ Serious / Elegant has less border-radius
+    ~ Playful / Fun has more border-radius
+
+- typefaces have a certain roundness: make sure that
+  border-radius matches that roundness!
+- use border-radius on buttons, images, around icons,
+  standout sections, and other elements
+
+- apply border-radius to chair project
+- border-radius property is used to change the curveness /
+  sharpness of the corners
+  * there are variants:
+    o border-top-left-radius
+    o border-top-right-radius
+    o border-bottom-right-radius
+    o border-bottom-left-radius
+  * border-radius property is a shorthand property that
+    affects multiple properties
+    o border-radius: 100px;
+      > will apply 100px border-radius to all corners
+    o border-radius: 100px 0;
+      > first value will apply to top-left and
+        bottom-right
+      > second value will apply to top-right and
+        bottom-left
+    o border-radius: 20px 30px 40px 50px;
+      > the values will apply to a clock-wise rotation
+        starting from the top-left
+      > first value is for top-left
+      > second value is for top-right
+      > third value is for bottom-right
+      > fourth value is for the bottom-left
+
+- apply border-radius to chair project
+
+
+WHITESPACE
+- the right amount of whitespace makes designs look clean,
+  modern and polished
+- whitespace communicates how different pieces of
+  information are related to one another
+- whitespace implies invisible relationships between the
+  elements of a layout
+
+Rules:
+- use tons of whitespace between sections
+- use a lot of whitespace between groups of elements
+- use whitespace between elements
+- inside groups of elements, try to use whitespace instead
+  of lines
+
+How much whitespace
+- the more some elements (or groups of elements) belong
+  together, the closer they should be!
+  ~ The "Law of Proximity"
+- start with a lot of whitespace, maybe even too much!
+  Then remove whitespace from there
+  * too much whitespace looks detached, too little looks
+    too crammed
+- match other design choices. If you have big text or big
+  icons, you need more whitespace
+- try a hard rule, such as using multiples of 16px for all
+  spacing
+
+
+VISUAL HIERARCHY
+- visual hierarchy is about establishing which elements
+  of a design are the most important ones
+- visual hierarchy is about drawing attention to these
+  most important elements
+- visual hierarchy is about defining a "path" for users,
+  to guide them through the page
+- we use a combination of position, size, colors, spacing,
+  borders, and shadows to establish a meaningful visual
+  hierarchy between elements / components
+
+Visual Hierarchy Fundamentals
+- position important elements closer to the top of the
+  page, where they get more attention
+  * attention flows down the page (and components)
+- use images mindfully, as they draw a lot of attention
+  (larger images get more attention)
+- whitespace creates separation, so use whitespace
+  strategically to emphasize elements
+
+Visual Hierarchy for Text Elements
+- for text elements, use font size, font weight, color,
+  and whitespace to convey importance
+- what text elements to emphasize? Titles, sub-titles,
+  links, buttons, data points, icons
+  * you can also de-emphasize less important text, like
+    labels or secondary / additional information
+
+Visual Hierarchy Between Components
+- emphasize an important component using background color,
+  shadow, or border (or multiple)
+- try emphasizing some component A over component B by
+  de-emphasizing component B
+- what components to emphasize? Testimonials, 
+  call-to-action sections, highlight sections, preview
+  cards, forms, pricing tables, important rows / columns
+  in tables, etc.
+
+- implement white space and visual hierarchy
+
+
+USER EXPERIENCE (UX)
+- Design is not just what it looks like and feels like.
+  Design is how it works - Steve Jobs
+  ~ looks like and feels like
+    o User interface (UI) is the visual presentation
+      of a product. It's how the graphical interface
+      looks and feels like
+      > Layout
+      > "Personality"
+      > Typography, colors, icons, etc.
+  ~ how it works
+    o User Experience (UX) is the overall experience the
+      user has while interacting with the product
+      > does the app feel logical and well thought out?
+      > does the navigation work intuitively?
+      > are users reaching their goals?
+
+UI and UX Design
+- UI is graphical interface
+  ~ UI Design is what makes an interface beautiful
+- UX is experience with interface
+  ~ UX Design is what makes an interface useful and
+    functional
+* UX Design can not exist without UI Design
+
+UX Design Guiding Principle: goals
+- A website or application exists for a reason: a user has
+  a goal for visiting it, and a business has a goal for
+  creating it
+  ~ User Goals and Business Goals
+  * good UX design aligns the user's goals with the
+    business' goals
+  * highlighting an option in the product pricing table
+    o helps the user decide faster what is the best option
+    o helps the business maximize revenue
+
+UX Rules for USABILITY
+- don't design complicated latyouts. Don't reinvent the
+  wheel. Use patterns that users know
+  * familiarity is much more needed than being original
+- make your call-to-action the most prominent element,
+  and make the text descriptive
+- use blue text and underlined text only for links!
+- animations should have a purpose and be fast:
+  between 200 and 500 ms
+- in forms, align labels and fields in a single vertical
+  line, to make the form easier to scan
+- offer users good feedback for all actions: form errors,
+  form success, etc. [web apps]
+- place action buttons where they will create an effect
+  [web apps]
+  ~ the law of locality
+  * adding new tasks call-to-action should be at the
+    bottom
+
+UX Rules for Website content
+- use a descriptive, keyword-focused headline on your
+  main page. Don't be vague or fancy!
+- only include relevant information, efficiently! Cut
+  out fluff and make the content 100% clear
+- use simple words! Avoid technical jargon and
+  "smart-sounding" words
+- break up long text with sub-headings, images,
+  block quotes, bullet points, etc.
+
+
+THE WEBSITE-PERSONALITIES FRAMEWORK
+- 100s of well-designed deconstructed
+  ~ distilled into countless of web design rules that
+    we just learned
+    * rules should be applied according to selected
+      website personality
+  ~ distilled into 7 website personalities
+
+Website Personality
+- the theme or vibe in the overall feel of the website
+
+Process of deciding
+- How do you want website to appear to users? What "vibe"
+  do you want to transmit?
+- Choose one of the website personalities accordingly
+- apply personality traits to each design ingredients
+
+Website Personalities
+1. Serious / Elegant
+   ~ Overview
+     o design for luxury and elegance, based on thin
+       serif typefaces, golden or pastel colors, and big
+       high-quality images
+   ~ Industries
+     o real estate, high fashion, jewelry, luxury products
+       or services
+   ~ Typography
+     o serif typefaces (especially in headings), light
+       font weight, small body font size
+   ~ Colors
+     o gold, pastel colors, black, dark blue or grey
+   ~ Images
+     o big high-quality images are used to feature elegant
+       and expensive products
+   ~ Icons    
+     o usually no icons, but thin icons and lines may be
+       used
+   ~ Shadows
+     o usually no shadows
+   ~ Border-radius
+     o usually no border-radius
+   ~ Layout
+     o a creative and experimental layout is quite common
+
+2. Minimalist / Simple
+   ~ Overview
+     o focuses on the essential text content, using small
+       or medium-sized sans-serif black text, lines, and
+       few images and icons
+   ~ Industries
+     o fashion, portfolios, minimalism companies, software
+       startups
+   ~ Typography
+     o boxy / squared sans-serif typefaces, small body
+       font sizes
+   ~ Colors
+     o usually black or dark grey, on pure white 
+       background. Usually just one color throughout the
+       design       
+   ~ Images
+     o few images, which can be used to add some color to
+       the design. Usually no illustrations, but if, than
+       just black
+   ~ Icons
+     o usually no icons, but small simple black icons may
+       be used
+   ~ Shadows
+     o usually no shadows
+   ~ Border-radius
+     o usually no border-radius
+   ~ Layout
+     o simple layout, a narrow one-column layout is quite
+       common
+
+3. Plain / Neutral
+   ~ Overview
+     o design that gets out of the way by using very
+       neutral and small typefaces, and a boxy, structured,
+       and condensed layout
+   ~ Industries
+     o well-established corporations (such as IBM),
+       companies that don't want to make an impact through
+       design
+   ~ Typography
+     o neutral-looking sans-serif typefaces are used, and
+       text is usually small and doesn't have visual
+       impact
+   ~ Colors
+     o safe colors are employed, nothing too bright or too
+       washed-out. Blues and blacks are common
+   ~ Images
+     o images are frequently used, but usually in a small
+       format
+   ~ Icons
+     o usually no icons, but simple icons may be used
+   ~ Shadows
+     o usually no shadows
+   ~ Border-radius
+     o usually no border-radius
+   ~ Layout
+     o structured and condensed layout, with lots of boxes
+       and rows
+
+4. Bold / Confident
+   ~ Overview
+     o design that makes an impact, by featuring big and
+       bold typography, paired with confident use of big
+       colored blocks
+   ~ Industries
+     o digital agencies, software startups, travel,
+       "strong" companies
+   ~ Typography
+     o boxy/squared sans-serif typefaces, big and bold
+       typography, especially headings. Uppercase headings
+       are common
+   ~ Colors
+     o usually multiple bright colors. Big color blocks /
+       sections are used to draw attention
+   ~ Images
+     o lots of big images are usually displayed
+   ~ Icons
+     o usually no icons
+   ~ Shadows
+     o usually no shadows
+   ~ Border-radius
+     o usually no border-radius
+   ~ Layout
+     o all kinds of layouts, no particular tendencies
+
+5. Calm / Peaceful
+   ~ Overview
+     o for products and services that care about the
+       customer, which is transmitted by calming pastel
+       colors and soft serif headings
+   ~ Industries
+     o healthcare, all products with focus on consumer
+       well-being
+   ~ Typography
+     o soft serif typefaces frequently used for headings,
+       but sans-serif headings might be used too (e.g for
+       software products)
+   ~ Colors
+     o pastel / washed-out colors: light oranges, yellows,
+       browns, greens, blues
+   ~ Images
+     o images and illustrations are usual, matching calm
+       color palette
+   ~ Icons
+     o icons are quite frequent
+   ~ Shadows
+     o usually no shadows, but might be used sparingly
+   ~ Border-radius
+     o some border-radius is usual
+   ~ Layout
+     o all kinds of layouts, no particular tendencies
+
+6. Startup / Upbeat
+   ~ Overview
+     o widely used in startups, featuring medium-sized
+       sans-serif typefaces, light-grey backgrounds, and
+       rounded elements
+   ~ Industries
+     o software startups, and other modern-looking
+       companies
+   ~ Typography
+     o medium-sized headings (not too large), usually one
+       sans-serif typeface in whole design. Tendency for
+       lighter text colors
+   ~ Colors
+     o blues, greens and purples are widely used. Lots of
+       light backgrounds (mainly gray), gradients are also
+       common
+   ~ Images
+     o images or illustrations are always used. 3d
+       illustrations are modern. Sometimes patterns and
+       shapes add visual details
+   ~ Icons
+     o icons are very frequent
+   ~ Shadows
+     o subtle shadows are frequent. Glows are becoming
+       modern
+   ~ Border-radius
+     o border-radius is very common
+   ~ Layout
+     o rows of cards and Z-patterns are usual, as well as
+       animations
+
+7. Playful / Fun
+   ~ Overview
+     o colorful and round designs, fueled by creative
+       elements like hand-drawn icons or illustrations,
+       animations, and fun language
+   ~ Industries
+     o child products, animal products, food
+   ~ Typography
+     o round and creative (e.g. handwritten) sans-serif
+       typefaces are frequent. Centered text is more
+       common
+   ~ Colors
+     o multiple colors are frequently used to design a
+       colorful layout, all over backgrounds and text
+   ~ Images
+     o images, hand-drawn (or 3D) illustrations, and
+       geometric shapes and patterns are all very
+       frequently used
+   ~ Icons
+     o icons are very frequent, many times in a hand-drawn
+       style
+   ~ Shadows
+     o subtle shadows are quite common, but not always
+       used
+   ~ Border-radius
+     o border-radius is very common
+   ~ Layout
+     o all kinds of layouts, no particular tendencies
+
+Advanced: Combining Playfulness and Boldness
+
+
+THE MISSING PIECE: STEAL LIKE AN ARTIST!
+- not completely copying a design! Instead, it's about
+  taking good parts and adapting them to our needs 
+* sites that holds different website designs:
+  ~ Land-book
+    o https://land-book.com/
+  ~ One Page Love
+    o https://onepagelove.com/
+  ~ awwwards
+    o https://www.awwwards.com/
+  ~ screenlane
+    o https://screenlane.com/
+    

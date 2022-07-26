@@ -1,0 +1,57 @@
+* all fonts are available in:
+  ~ Google Fonts
+  ~ Font Squirrel
+
+* color tools that can be used are the following:
+    o Open Color
+      > https://yeun.github.io/open-color/
+    o tailwindcss
+      > https://tailwindcss.com/docs/customizing-colors
+    o FLAT UI COLORS 2
+      > https://flatuicolors.com/
+
+* color contrast tools that can be used are the following:
+    o Open Color
+      > https://yeun.github.io/open-color/
+    o tailwindcss
+      > https://tailwindcss.com/docs/customizing-colors
+    o palleton
+      > https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
+    o coolors
+      > https://coolors.co/
+    o tint & shade generator
+      > https://maketintsandshades.com/
+
+* places to get images:
+    o Unsplash
+      > https://unsplash.com/
+    o Pexels
+      > https://www.pexels.com/
+    o DrawKit
+      > https://drawkit.com/
+    o unDraw
+      > https://undraw.co/illustrations
+
+* compress image tools that can be used:
+    o Squoosh
+      > https://squoosh.app/
+
+* tools to have icons:
+    o Phosphor icons
+      > https://phosphoricons.com/
+    o Ionicons
+      > https://ionic.io/ionicons
+    o ICONS8
+      > https://icons8.com/
+    o heroicons
+      > https://heroicons.com/
+
+* sites that holds different website designs:
+  ~ Land-book
+    o https://land-book.com/
+  ~ One Page Love
+    o https://onepagelove.com/
+  ~ awwwards
+    o https://www.awwwards.com/
+  ~ screenlane
+    o https://screenlane.com/

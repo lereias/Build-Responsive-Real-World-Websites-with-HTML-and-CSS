@@ -17,3 +17,12 @@
 
 * shortcut to move a line up for windows is "alt +
   uparrowkey"
+
+* there is a trick that you can have multiple cursors
+  in VS Code
+  * for windows, use alt key and click the line
+  * for mac, use cmd key and click the line
+
+* In VS Code, hover on the property on the css rules and 
+  click the "MDN Web Docs" to redirect to the documentation
+  of the property
