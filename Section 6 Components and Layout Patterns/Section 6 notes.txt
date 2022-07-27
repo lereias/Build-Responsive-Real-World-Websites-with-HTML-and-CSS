@@ -1,0 +1,153 @@
+COMPONENTS AND LAYOUT PATTERNS
+
+ELEMENTS AND COMPONENTS
+
+From elements to webpage
+- elements
+  ~ paragraphs, buttons, images
+- components
+  ~ feature row, feature card, pricing table, tab
+    component
+- layouts
+  ~ patterns
+- webpage
+
+Rules:
+- use common elements and components to convey your
+  website's information
+- combine components into layouts using common layout
+  patterns
+- assemble different layout areas into a complete, final
+  page
+
+Gallery Index: elements, sections, patterns
+
+A. Elements
+- text
+- buttons
+- images
+- input elements
+- tags
+
+B. Components
+- breadcrumbs
+- pagination
+- alert and status bars
+- statistics
+- gallery
+- feature box
+- preview and profile cards
+- accordion
+- tabs
+- carousel
+- customer testimonials
+- customer logos
+- featured-in logos
+- steps
+- forms
+- tables
+- pricing tables
+- modal windows
+
+C. Section Components
+- navigation
+- hero section
+- footer
+- call-to-action section
+- feature row
+
+D. Layout Patterns
+- row of boxes or cards
+- grid of boxes or cards
+- Z-pattern
+- f-pattern
+- single-column
+- sidebar
+- multi-column / magazine
+- asymmetry / experimental
+
+
+- Elements
+01 text
+02 buttons
+03 images
+04 input elements
+05 tags
+
+- Components
+01 breadcrumbs
+   ~ page organization
+     o page1 > page2 > page3
+02 pagination
+03 alert and status bars
+04 statistics
+05 gallery
+06 feature box
+07 preview and profile cards
+08 accordion
+   ~ hiding information and appears when clicked
+     o used for FAQ
+09 tabs
+   o used for product features, bigger areas
+10 carousel
+   ~ also called slider
+11 customer testimonials
+12 customer logos
+   ~ used by these companies: coke, pepsi
+13 featured-in logos
+   ~ ratings / places that your product has been featured
+     in
+14 steps
+   ~ online shopping sites product shipping process
+15 forms
+   ~ log in, registration, reviews
+16 tables
+17 pricing tables
+18 modal windows
+   ~ functional modal windows, marketing modal windows
+
+
+ACCORDION
+- create accordion component
+* with flex-direction set to column:
+  ~ align-items aligns items horizontally, no longer
+    vertically
+  ~ justify-content aligns items vertically, no longer
+    horizontally
+  ~ gap acts like a margin-bottom, no longer like
+    margin-right
+
+* you can click the dropdrown arrow beside the line
+  number in VS Code to collapse the section, easy to
+  copy that entire section
+  
+
+CAROUSEL
+- transform property that is used for many things, one
+  is to scale (scale()) elements
+  * padding on the parent element changes the position of 
+    the scaled image
+* if you absolute position a flex item, it would still be
+  affected by align-items property
+
+Vertical Centering Using Aboslute Positioning
+* top: 50%; will not exactly center your element, it is
+  from the top of the container to the top-most part of
+  the element
+* use transform property to translate (translate())
+  elements
+  ~ transform: translate(0, - 50%);
+    o first value is horizontally
+    o second value is vertically 
+* top, left, right, and bottom properties are properties
+  related to the parent element
+* transform: translate() is related to the element itself
+* its a good practice to have a space html entity (&nbsp;)
+  if you gonna make things just empty
+
+* the default page that will be displayed using the
+  "Live Server" VS Code Extension will be index.html
+
+* in the absence of index.html, if you retain the 
+  127.0.0.1:<port number>, you will be lead to a file
+  directory

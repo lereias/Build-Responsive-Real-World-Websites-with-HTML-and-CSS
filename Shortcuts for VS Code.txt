@@ -26,3 +26,14 @@
 * In VS Code, hover on the property on the css rules and 
   click the "MDN Web Docs" to redirect to the documentation
   of the property
+
+* you can click the dropdrown arrow beside the line
+  number in VS Code to collapse the section, easy to
+  copy that entire section
+
+* the default page that will be displayed using the
+  "Live Server" VS Code Extension will be index.html
+  
+* in the absence of index.html, if you retain the 
+  127.0.0.1:<port number>, you will be lead to a file
+  directory
