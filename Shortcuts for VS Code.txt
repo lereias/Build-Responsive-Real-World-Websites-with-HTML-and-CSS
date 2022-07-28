@@ -37,3 +37,5 @@
 * in the absence of index.html, if you retain the 
   127.0.0.1:<port number>, you will be lead to a file
   directory
+
+* you can do background-color: none; for transparent background

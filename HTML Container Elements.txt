@@ -1,0 +1,39 @@
+- div element
+  ~ <div></div>
+  ~ generic container, no semantic meaning
+
+- header element
+  ~ <header></header>
+  ~ for header, top part of the webpage
+
+- article element
+  ~ <article></article>
+  ~ for articles, blogposts
+
+- footer element
+  ~ <footer></footer>
+  ~ for end part of the webpage
+
+- aside element
+  ~ <aside></aside>
+  ~ additional information, related posts, etc.
+
+- nav element
+  ~ <nav></nav>
+  ~ links that redirect people to
+
+- section element
+  ~ <section></section>
+  ~ a section of the webpage
+
+- figure element
+  ~ <figure></figure>
+  ~ product cards (image and description)
+
+- menu element
+  ~ <menu></menu>
+  ~ menu bars mostly web app
+
+- main element
+  ~ <main></main>
+  ~ the focus of the webpage

@@ -136,7 +136,7 @@ Vertical Centering Using Aboslute Positioning
   the element
 * use transform property to translate (translate())
   elements
-  ~ transform: translate(0, - 50%);
+  ~ transform: translate(0, -50%);
     o first value is horizontally
     o second value is vertically 
 * top, left, right, and bottom properties are properties
@@ -151,3 +151,128 @@ Vertical Centering Using Aboslute Positioning
 * in the absence of index.html, if you retain the 
   127.0.0.1:<port number>, you will be lead to a file
   directory
+
+
+TABLE
+- not much used anymore
+* table > thead / tbody > tr > td / th
+  ~ table property (<table></table>)
+  ~ table header property (<thead></thead>) or
+    table body property (<tbody></tbody>)
+  ~ table row property (<tr></tr>)
+  ~ table column property (<td></td>) or
+    table head property (<th></th>)
+    * table head are horizontally centered by default and
+      bold
+* border-collapse: collapse; is used to join the border of
+  td / th and border of the entire table itself
+* format cells themselves not the thead or tr
+* format width of cells in thead and other cells will 
+  follow
+
+- create table component
+
+PAGINATION CHALLENGE #1
+- do challenge #1
+* you can do background: none; for transparent / no 
+  background
+* flex containers are like block elements
+* "and selectors" are class selectors without a space
+  between them
+  * it means that both classes are given to that
+    element
+  ~ .page-number.current {}
+
+
+SECTION COMPONENTS
+01 Navigation
+   * secondary navigation is a navigation inside the
+     page
+02 Hero Section
+   * the very first section of the page
+   ~ three big trends
+     o text on one side and image on other side
+     o background image and text on top
+     o first have some text and below image
+03 Footer
+   * include side map
+     ~ company info, policy, etc.
+04 Call-to-action section
+   * subscribing, free trial, contacting company
+05 Feature Row
+   ~ shows feature of product
+
+
+LAYOUT PATTERNS
+- repeating a certain component multiple times
+01 Row of Boxes / Cards
+02 Grid of Boxes / Cards
+   ~ online shops
+
+* Aside: Nesting patterns in components
+
+03 Z-pattern
+   ~ repeats feature rows but alternates image and text
+04 F-pattern
+   ~ does not alternate like z-pattern
+05 Single Column
+06 sidebar
+07 Multi-column / Magazine
+08 Asymmetry / Experimental
+
+
+HERO SECTION COMPONENT
+* 100vh
+  ~ vh means viewport height
+  ~ 100% of the viewport height
+
+* 100vw
+  ~ vw means viewport width
+  ~ 100% of the viewport width
+
+* background-image property is used to add a background
+  image
+  * background-image: url();
+    o url function (url()) is the source of the image
+  * background-image: linear-gradient();
+    o linear-gradient function (linear-gradient()) creates 
+      a gradient of colors as background
+
+* if you use multiple functions in background-image, first
+  one will be the top-most, last one will be the
+  bottom-most
+
+* background-size property is used to change the
+  background image size
+  * background-size: cover;
+    o changes the size of image to cover entire viewport
+
+
+BUILDING A WEB APPLICATION LAYOUT
+
+-build the web application layout
+* Side Navigation
+* Top Menu Navigation
+  ~ one flex item (trash) is at the very right
+* Section / Column for Emails
+  * Has a Vertical Scrollbar
+* Section / Column for Email View
+* Section / Column for Additional Info
+* Entire Layout is 100vh (100% of viewport height)
+
+* Nav is a navigation that contains link that redirect
+  you
+* Menu is actually for menu buttons in an actual web
+  application
+* body does not occupy the entire viewport, just its
+  content by default
+* you can use margin-left: auto; on a flex-item to
+  separate it to the others
+
+* overflow property is a shorthand property that handles
+  overflow
+  * overflow: scroll;
+    ~ this one will add a scrollbar instead of showing all 
+      the elements
+  * overflow: hidden;
+    ~ hides elements that overflow the viewport
