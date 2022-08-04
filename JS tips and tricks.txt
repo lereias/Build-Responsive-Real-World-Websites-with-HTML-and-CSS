@@ -1,0 +1,175 @@
+********************************************************************************************************
+* APPLY STYLE TO MOST CURRENT CLICKED ELEMENT AND REMOVE STYLE TO PREVIOUS CLICKED(<div></div>)
+********************************************************************************************************
+
+- HTML
+
+<div class="outbox-msg clicked" data-id="outbox-msg--1">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650 PIN has been sucessfully updated on 2022-01-15
+    15:30:55. Ref ... ID:9990000000002650PIN has been sucessfully
+    updated on 2022-01-15 15:30:55. Ref ... ID:9990000000002650PIN has
+    been sucessfully updated on 2022-01-15 15:30:55. Ref ...
+    ID:9990000000002650PIN has been sucessfully updated on 2022-01-15
+    15:30:55. Ref ... ID:9990000000002650PIN has been sucessfully
+    updated on 2022-01-15 15:30:55. Ref ... ID:9990000000002650PIN has
+    been sucessfully updated on 2022-01-15 15:30:55. Ref ...
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--2">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--3">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--4">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--5">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--6">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--7">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--8">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+<div class="outbox-msg" data-id="outbox-msg--9">
+  <h3 class="tertiary">09111111111</h3>
+  <span class="datetime-outbox-sender">2022-01-15 15:30:55</span>
+  <p class="message-outbox-sender">
+    PIN has been sucessfully updated on 2022-01-15 15:30:55. Ref
+    ID:9990000000002650
+  </p>
+</div>
+
+- JS
+
+$(".outbox-msg").on("click", function () {
+  // Get the id from the dataset
+  const id = $(this).data("id");
+
+  // Remove all the active classes
+  $(".outbox-msg").removeClass("clicked");
+
+  // Add a class to all those elements that
+  // have a data-id that matches the id
+  $(`[data-id="${id}"`).addClass("clicked");
+});
+
+- CSS
+
+.outbox-msg {
+  flex: 0 0 auto;
+
+  /* height: 10%; */
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+
+  padding: 1.2rem 2.4rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px;
+  align-items: center;
+  row-gap: 10px;
+
+  transition: all 0.3s;
+
+  cursor: pointer;
+}
+
+.tertiary {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.datetime-outbox-sender {
+  justify-self: end;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #aaa;
+}
+
+.message-outbox-sender {
+  grid-column: 1 / -1;
+  align-self: start;
+
+  font-size: 1.4rem;
+  color: #555;
+
+  /* make text-overflow work */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.outbox-msg.clicked {
+  /* height: 50%; */
+  /* min-height: 100vh; */
+  /* background-color: rgb(25, 113, 194); */
+  background-color: #1971c2;
+}
+
+.outbox-msg.clicked:first-child {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.outbox-msg.clicked .tertiary {
+  color: #d0ebff;
+}
+
+.outbox-msg.clicked .datetime-outbox-sender {
+  color: #74c0fc;
+}
+
+.outbox-msg.clicked .message-outbox-sender {
+  overflow: visible;
+  white-space: normal;
+  display: block;
+
+  color: #a5d8ff;
+}

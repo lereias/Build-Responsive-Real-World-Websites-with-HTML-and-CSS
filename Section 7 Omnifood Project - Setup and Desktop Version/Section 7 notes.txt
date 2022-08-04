@@ -1,0 +1,487 @@
+7 Steps to a Great Website
+1. Define
+   ~ define the project
+   ~ define WHO THE WEBSITE IS FOR
+     * Is it for yourself?
+     * For a client of your agency or your freelancing
+       business?
+   ~ Define WHAT THE WEBSITE IS FOR
+     * define business and user goals
+   ~ Define a TARGET AUDIENCE
+     * be really specific if possible and if it makes sense
+       for your website (this can come from your client)
+
+2. Plan
+   ~ plan the project
+   ~ plan and gather website content: copy (text), images,
+     videos, etc.
+   ~ content is usually provided by the client, but you
+     also can help them produce and find some content
+     (simply finding free images is easiest, but if they
+     want copy, charge them extra)
+   ~ for bigger sites, plan out the sitemap: what pages
+     the site needs, and how they are related to one
+     another (content hierarchy)
+   ~ based on the content, plan what sections each page
+     needs in order to convey the content's message, and
+     in which order
+   * everything is based on the content of the website
+   ~ define the website personality
+
+3. Sketch
+   ~ sketch layout and component ideas
+   ~ think about what components you need, and how you can
+     use them in layout patterns
+   ~ get ideas out of your head: sketch them with pen and
+     paper or with some design software (e.g. Figma)
+   ~ this is an iterative process: experiment with
+     different components and layouts, until you arrive at
+     a first good solution
+   ~ you don't need to sketch everything, and don't make it
+     perfect. At some point, you're ready to jump into
+     HTML and CSS
+
+4. Design and Build
+   ~ design and build website
+   ~ use decisions, content and sketches from Steps 1, 2,
+     and 3 to design and build the website with HTML and
+     CSS ("designing in the browser")
+   ~ you already have the layout and components that you
+     selected in Step 3. In this step, you need to design
+     the actual visual styles
+   ~ create the design based on selected website personality,
+     the design guidelines I showed you, and inspiration
+   ~ use the client's branding (if it exists already) for
+     design decisions whenever possible: colors,
+     typography, icons, etc.
+
+5. Test and Optimize
+   ~ test and optimize
+   ~ make sure website works well in all major browsers
+     (Chrome, Firefox, Safari, Edge, maybe even old IE -
+     now dead rip July 2022)
+   ~ Test the website on actual mobile devices, not just
+     in DevTools
+   ~ Optimize all images, in terms of dimensions and file
+     size
+   ~ Fix simple accessibility problems (e.g. color
+     contrast issues)
+   ~ Run the Lightouse performance test in Chrome DevTools
+     and try to fix reported issues
+   ~ Think about Search Engine Optimization (SEO)
+
+6. Launch
+   ~ launch the masterpiece
+   ~ once all work is done, everything is perfect, and you
+     got approval from your client (or yourself), it's time
+     to share your masterpiece with the world!
+   ~ upload your website files to a hosting platform. There
+     are countless platform, we will use one with a free
+     plan (Netlify)
+   ~ Choose and buy a great domain name, one that
+     represents the brand well, is memorable and easy to
+     write
+
+7. Maintain and Updates
+   ~ maintain and keep updating website
+   ~ launching is not the end...
+   ~ keep the website content updated over time. If you're
+     working with a client, you can create a monthly
+     maintenance contract (recurring revenue)
+   ~ install analytics software (e.g. Google Analytics or
+     Fathom) to get statistics about website users. This
+     may inform future changes in the site structure and
+     content
+   ~ a blog that is updated regularly is a good way to keep
+     users coming back, and is also good for SEO
+
+
+OMNIFOOD
+~ your first "job"!
+~ you were hired to design and build a website for
+  fictional company called Omnifood
+~ Omnifood is startup that uses AI to create and deliver
+  custom healthy meal plans
+~ They provided us with all the content for the website
+  (content.md)
+  * md stands for "markdown"
+  * hash (#) stands for heading
+  * more hashes, smaller heading
+
+Step 1: define the project
+- define Who the website is for
+* for a client
+
+- define What the website is for
+* Business goal: selling monthly food subscription
+  User goal: eating well effortlessly, without spending a
+             lot of time and money
+
+- define target audience
+* busy people who like technology, are interested in a
+  healthy diet, and have a well-paying job
+
+Step 2: plan the project
+- plan and gather website content
+* Omnifood did it already for us
+
+- plan out the sitemap
+* we will just build a one-page marketing website
+  (oftentimes called a landing page), so no sitemap
+
+- define website personality
+* based on the tech-centered target audience, as well as
+  the actual product being sold, we will use the startup /
+  upbeat personality. We might add some elements of the
+  calm / peaceful personality, since the product is all
+  about consumer well-being as well
+
+- plan page sections
+* gallery, hero section, featured-in, steps, footer, feature 
+  blocks, call-to-action, price table (our assumption - 
+  Lereias)
+* actual sections by Jonas Schmedtmann (top to bottom)
+  ~ logo + navigation
+  ~ hero
+  ~ featured in
+  ~ how it works
+  ~ meals (and list of diets)
+  ~ testimonials + gallery
+  ~ pricing + features
+  ~ CTA (call-to-action)
+  ~ footer
+
+Step 3: sketching initial layout ideas
+
+First ideas and sketch
+~ logo + navigation
+~ hero
+~ featured in
+~ how it works
+~ meals (and list of diets)
+~ testimonials + gallery
+~ pricing + features
+~ CTA (call-to-action)
+~ footer
+
+Step 4: first design and development steps
+* Unsplash is the main site used for images in Omnifood
+* layout your ingredients
+
+
+RESPONSIVE DESIGN PRINCIPLES
+
+Responsive design
+- design technique to make a webpage adjust its layout
+  and visual style to any possible screen size (window
+  or viewport size)
+- in practice, this means that responsive design makes
+  websites usable on all devices, such as desktop
+  computers, tablets, and mobile phones
+- it's a set of practices, not a separate technology
+  * it's all just CSS!
+
+Responsive design ingredients
+1. fluid layouts
+   ~ to allow webpage to adapt to the current viewport
+     width (or even height)
+   ~ use % (or vh / vw) unit instead of px for elements
+     that should adapt to viewport (usually layout)
+   ~ use max-width instead of width
+
+2. responsive units
+   ~ use rem unit instead of px for most lengths
+   ~ to make it easy to scale the entire layout down (or up)
+    automatically
+   * setting 1 rem to 10px for easy calculations
+     * do it by using % rather than px so that it is still
+       based on the original
+
+3. flexible images
+   ~ by default, images don't scale automatically as we
+     change the viewport, so we need to fix that
+   ~ always use % for image dimensions, together with the
+     max-width property
+
+4. media queries
+   ~ bring responsive sites to life!
+   ~ to change CSS styles on certain viewport widths
+     (called breakpoints)
+
+Desktop-first vs mobile-first development
+
+desktop-first approach
+- start writing CSS for the desktop: large screen
+- then, media queries shrink design to smaller screen
+* we will do desktop-first in this project
+
+mobile-first approach
+- staret writing CSS for mobile devices: small screen
+- then, media queries expand design to a large screen
+- forces us to reduce websites and apps to the absolute
+  essentials
+
+
+HOW REM AND MAX-WIDTH WORK
+* max-width property makes the element get the width of
+  the viewport if the value indicated is lower than the
+  width of the viewport
+
+rem
+- root of element font size
+* by default 1rem is 16px
+* you can change the value of 1rem by defining it in html
+  element
+* you can use the computed tab in DevTools to check the
+  conversion of rem to px
+
+
+HERO SECTION
+* split editor right (top right of VS Code)
+* small text are called "microcopy"
+* use box-shadow rather than border in order to create
+  border
+  * box-shadow: inset 0 0 0 3px #fdf2ea;
+    * inset means inside the element
+* transition property is used to transition / animate
+  an element
+  ~ transition: <element-property / all> <duration (s/ms)> 
+    <effect>
+  * Put transitional on original "state" (link, visited)
+  * use a "helper" class to apply properties
+    * properties inside of it should have "!important"
+* sticky header works if there is a fixed height for
+  the header
+* links in navigation should be inside unordered list
+
+REUSABLE GRID
+* you can use "shift+alt+downarrowkey" to copy a line
+  down
+* create classes for different amount of settings for
+  the grid such as columns
+  ~ 
+  .grid {
+    display: grid;
+    gap: 9.6rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+* create a centered container with a class .container
+  ~ 
+  .container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  }
+
+HOW IT WORKS SECTION
+* you can auto complete some properties by using tab
+* rules (sometimes) are meant to be broken
+* if css is going too long, you can split them up to
+  different files
+* we cannot add pseudo-elements to images
+* height: 60%; will not work, use padding-bottom: 60%;
+  to immitate height
+
+* z-index property can change the stacked elements layer
+  (back-most to front-most)
+
+
+FEATURED IN SECTION
+* justify-content: space-around; creates margin-left and
+  margin-right on the ends of the flex container
+* filter property can be used on images
+  ~ filter: grayscale(100%);
+    * grayscale function (grayscale()) makes images 
+      grayscale
+  ~ filter: brightness(0);
+    * brightness function (brightness()) makes images 
+      black if brightness 0
+
+* opacity property changes the opacity of element
+
+
+MEALS SECTION
+* it is a bad practice to do something like "Calories: 
+  120", it is better to use "120 Calories" instead
+* for categories such as "Category: Vegetarian", it is
+  better to make it a tag rather than place it inside
+  the list
+
+* use Ionicons
+  * install it based from the usage page
+  * ion-icon element (<ion-icon></ion-icon>)will be created
+  * there are times that icons are treated as text (color
+    property)
+
+* for cards, make sure images have same aspect ratio
+* transition: all 0.3s; is the best that you should do
+  rather than using just a property
+
+* recreate an underline on link using border property
+  * currentColor in border will take in the color of text
+  * common tricks if link is hovered, underline should be
+    gone
+  * make border go away by making its color transparent;
+
+
+TESTIMONIAL SECTION
+* a section that takes all of the available width is called
+  a full bleed section
+* you can treat fr (fractional/fraction) in css grid as
+  percentages
+  ~ grid-template-columns: 55fr 45fr
+    * 55% of the entire width is for 1st column
+    * 45% of the entire width is for 2nd column
+
+
+PRICING TABLE SECTION
+* lists are a great candidate for reusability
+
+* you can use not pseudo-class (not()) to apply styles not 
+  in the parenthesis
+  ~ .grid:not(:last-child){}
+    * style will apply to all .grid except last child
+
+* use transform: rotate() and overflow: hidden to make a 
+  "ribbon" on the best value pricing
+
+
+CALL TO ACTION SECTION
+
+* linear-gradient function (linear-gradient()) in
+  background-image property can have a degree as its
+  requirement
+  ~ background-image: linear-gradient(90deg, red, yellow);
+    ~ it will apply linear-gradient to the right
+  ~ background-image: linear-gradient(180deg, red, yellow);
+    ~ it will apply linear-gradient to the bottom
+    * default degree
+  ~ background-image: linear-gradient(270deg, red, yellow);
+    ~ it will apply linear-gradient to the left
+  ~ background-image: linear-gradient(360deg, red, yellow);
+    ~ it will apply linear-gradient to the top
+  * you can use keyword such as "to top" to make it
+    linear-gradient to the top
+    ~ background-image: linear-gradient(to top, red, 
+      yellow);
+    ~ background-image: linear-gradient(to right, red, 
+      yellow);
+    ~ background-image: linear-gradient(to bottom, red, 
+      yellow);
+    ~ background-image: linear-gradient(to left, red, 
+      yellow);
+
+* for href, source, url function, if css file is not in the 
+  root folder (project folder) but in a child folder, you 
+  should go back one level to access root folder
+  * use "../" to go back one level
+  ~
+  css > style.css
+  img > eating.jpg
+
+  .cta-img-box {
+    background-image: url("../img/eating.jpg");
+  }
+
+* background-position property positions the image on its
+  parent element
+
+* role attribute states where element is used (e.g. img)
+* aria-label attribute states what is the element
+  * same with alt attribute in img
+
+* form element{<form></form>} is something like a container
+  element but for inputs and submit buttons
+
+* input element (<input />) is used for forms
+  * input elements are inline elements
+  ~ type attribute is the one that sets what it is for
+    ~ <input type="textbox" />
+      * common textbox
+    ~ <input type="email" />
+      * used for emails
+      * show warning if it is not email
+    ~ <input type="password" />
+      * replaces text with symbols
+  ~ placeholder attribute is a text inside the input that
+    shows the format that is needed to be used
+    * it is not correct to indicate what the input element
+      should be used for (e.g. Name), it is better to use
+      it to do the format (e.g. John Smith)
+    * placeholder will be gone when you type
+    * you can style your placeholder by using 
+      element::placeholder
+
+* label element (<label></label>) is used to describe the 
+  input
+  * labels are inline elements
+  * for attribute (for="") is used to link the label to the 
+    input id that has the same value indicated in the for
+    attribute
+    ~ 
+    <label for="name">Name</label>
+    <input id="name" type="textbox" />
+    * if you click the label, it will focus you on the
+      input
+    * also works on select element
+
+* select element (<select></select>) is an element that
+  you can choose from the things inside of it
+  * drop-down
+  * option element (<option></option>) is an element
+    inside the select element that represents an option
+    that you may choose
+    * value attribute (value="") is the real value that
+      will be passed if the form is submitted
+      ~ <option value="youtube">YouTube videos</option>
+        * youtube will be passed, not YouTube Videos
+      * you can make value="" if you want it to have no
+        value, just a placeholder
+
+* required attribute (required) is used to make input
+  and/or select elements be mandatory
+
+* input and select elements do not inherit the 
+  font-family and color indicated in body element
+  * add font-family attribute to it and made it value
+    inherit to inherit the font-family used in body
+    ~ font-family: inherit;
+  * same applies to color
+
+* use global selector (*) to change all elements focus
+  ~ 
+  *:focus {
+    outline: none;
+    outline-offset: 8px;    
+  }
+  * outline property set to none disables the outline
+  * do not do this, change outline rather
+  * outline-offset property is the offset of outline
+    from the element that it is focusing
+
+
+FOOTER
+* address element is used for contact information
+
+* you can use "tel" for telephone in href anchor tag
+  ~ <a href="tel:415-201-6370">415-201-6370</a>
+    * if clicked it will try to call that number
+
+* you can use "mailto" for email in href anchor tag
+  ~ <a href="mailto:123@gmail.com">123@gmail.com</a>
+    * if clicked it will try to send an email
+
+* break element (<br />) adds a linebreak

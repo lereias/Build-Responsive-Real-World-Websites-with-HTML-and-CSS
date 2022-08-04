@@ -38,4 +38,9 @@
   127.0.0.1:<port number>, you will be lead to a file
   directory
 
-* you can do background-color: none; for transparent background
+* split editor right (top right of VS Code)
+
+* you can use "shift+alt+downarrowkey" to copy a line
+  down
+
+* you can auto complete some properties by using tab

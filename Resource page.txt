@@ -1,1 +1,17 @@
 https://codingheroes.io/resources/
+
+text-overflow property
+https://stackoverflow.com/questions/17779293/css-text-overflow-ellipsis-not-working
+
+on the text element itself:
+/* make text-overflow work */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+
+to make text element back to normal:
+/* make text-overflow back to normal */
+  overflow: visible;
+  white-space: normal;
+  display: block;

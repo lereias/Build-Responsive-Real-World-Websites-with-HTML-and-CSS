@@ -29,6 +29,7 @@
 - figure element
   ~ <figure></figure>
   ~ product cards (image and description)
+  ~ anything that has captions and images
 
 - menu element
   ~ <menu></menu>
@@ -37,3 +38,25 @@
 - main element
   ~ <main></main>
   ~ the focus of the webpage
+
+- figcaption element
+  ~ <figcaption></figcaption>
+  ~ for captions inside of a figure element
+  ~ cannot be used outside figure element
+
+- form element
+  ~ <form></form> 
+  ~ is something like a container element but for inputs 
+    and submit buttons
+
+- address element
+  ~ <address></address>
+  ~ for contact information
+
+* you can use "tel" for telephone in href anchor tag
+  ~ <a href="tel:415-201-6370">415-201-6370</a>
+    * if clicked it will try to call that number
+
+* you can use "mailto" for email in href anchor tag
+  ~ <a href="mailto:123@gmail.com">123@gmail.com</a>
+    * if clicked it will try to send an email

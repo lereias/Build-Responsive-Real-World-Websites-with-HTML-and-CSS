@@ -31,6 +31,8 @@
       > https://drawkit.com/
     o unDraw
       > https://undraw.co/illustrations
+    o UI Faces
+      > https://www.uifaces.co/
 
 * compress image tools that can be used:
     o Squoosh
@@ -55,3 +57,14 @@
     o https://www.awwwards.com/
   ~ screenlane
     o https://screenlane.com/
+
+* hosting sites:
+  ~ Netlify
+    o https://www.netlify.com/
+
+* analytics sites:
+  ~ Google analytics
+    o https://analytics.google.com/analytics/web/provision/#/provision
+
+  ~ Fathom
+    o https://usefathom.com/

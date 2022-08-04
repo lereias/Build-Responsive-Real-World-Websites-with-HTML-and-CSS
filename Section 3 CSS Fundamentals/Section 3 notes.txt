@@ -322,6 +322,10 @@ CSS THEORY #3: THE CSS BOX MODEL
   ~ padding: 10px 20px;
     o applies a padding to top-bottom with 10px
     o applies a padding to left-right with 20px
+  ~ padding: 10px 0 20px;
+    o applies a padding to top with 10px
+    o applies a padding to left-right with 0
+    o applies a padding to bottom with 20px
   ~ padding: 1px 2px 3px 4px;
     o applies the indicated values in a clock-wise
       direction
@@ -343,6 +347,10 @@ CSS THEORY #3: THE CSS BOX MODEL
   ~ margin: 10px 20px;
     o applies a margin to top-bottom with 10px
     o applies a margin to left-right with 20px
+  ~ margin: 10px 0 20px;
+    o applies a margin to top with 10px
+    o applies a margin to left-right with 0
+    o applies a margin to bottom with 20px
   ~ margin: 1px 2px 3px 4px;
     o applies the indicated values in a clock-wise
       direction
