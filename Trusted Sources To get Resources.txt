@@ -1,3 +1,6 @@
+* type-scale tools:
+  ~ https://type-scale.com/
+
 * all fonts are available in:
   ~ Google Fonts
   ~ Font Squirrel
@@ -68,3 +71,11 @@
 
   ~ Fathom
     o https://usefathom.com/
+
+* screen sizes:
+  ~ screensize.es
+    o https://screensiz.es/
+
+Site that is good:
+https://github.com/jensimmons/cssremedy
+https://every-layout.dev/

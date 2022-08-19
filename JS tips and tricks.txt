@@ -173,3 +173,13 @@ $(".outbox-msg").on("click", function () {
 
   color: #a5d8ff;
 }
+
+
+
+- 
+If you are triggering your event from elements that were altered or injected post pageload, these events will not fire.
+
+Finding or creating a parent of the element to be watched that's present on load then setting the event to trigger from that parent element can bypass this.
+
+- best way to handle textbox
+https://stackoverflow.com/questions/17317465/jquery-textbox-change-event-doesnt-fire-until-textbox-loses-focus/17317620#17317620

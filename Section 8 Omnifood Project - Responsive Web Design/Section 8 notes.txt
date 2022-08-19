@@ -1,0 +1,99 @@
+MEDIA QUERIES
+
+max-width
+~ the media query will be applied up to the width stated
+* @media (max-width: 600px)
+* @media (max-width: 1200px)
+* media queries can overlap meaning both can be applied
+* the latest media query will be applied if there are
+  conflict in properties (e.g. both has background-color)
+
+
+SELECTING BREAKPOINTS
+
+BREAKPOINTS
+- the viewport design
+- pixel values that you want to put on media queries
+
+~ Based on popular devices (BAD)
+~ Based on screen width ranges (GOOD)
+~ When design breaks down (PERFECT)
+  * only look on content and design
+
+
+RESPONDING TO SMALL LAPTOPS
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+- need this to actually match the width of the screen
+
+1344px
+- HD display ready screens
+
+1rem = 1em = 16px
+
+em
+- current font
+
+* rem has bugs on some browsers in media queries, that is
+  why we use em
+  * this is on the screen-width not in the usage inside of
+    it
+
+* we can't make it perfect for each and every screen size
+* changing the root font size will make it easier to make
+  font-size be responsive
+  * in media query
+  ~
+  @media (max-width: 120em) {
+    html{
+      /*9px / 16px = 56.25%*/
+      font-size: 56.25%;
+    }
+  }
+
+* always assume the original customization of the root
+  font-size (10px)
+* as a golden rule, elements should occupy atleast 200px 
+  - 300px
+
+* you can select elements using their attributes by using
+  square brackets ([])
+  ~ .menu-icon[name="close-outline"]
+
+* you can't do transitions in display none
+
+
+* STEPS ON HIDING ELEMENTS
+/* 1) Hide it visually */
+opacity: 0;
+
+/* 2) Make it unaccessible to mouse and keyboard */
+pointer-events: none;
+
+/* 3) Hide it from screen readers */
+visibility: hidden;
+
+* do overflow-x: hidden to hide elements horizontally
+  dispositioned
+
+* do not do overflow: hidden because it will disable
+  your entire page
+
+/* Only works if there is nothing absolutely positioned
+  in relation to body */
+  overflow-x: hidden;
+
+* using transform to actually move the absolutely
+  positioned elements has a smoother animation than
+  the properties of absolute elements (top, right, etc.)
+
+* transition ease-out starts fast and begins to slow the
+  animation
+
+* transition ease-in starts slow and begins to fast the
+  animation
+
+* generally, phones are at a range of 350px - 450px
+
+* transform: translate works with everything, not just
+  positioned absolute elements
