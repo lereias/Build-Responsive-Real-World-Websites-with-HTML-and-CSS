@@ -1,0 +1,232 @@
+* javascript is better external rather than inside the html
+  document
+* <script defer src=""></script>
+
+variables
+- const <name of variable>
+
+selecting the elements in html document
+- document.querySelector("<selector of element>")
+-- document.querySelector(".heading-primary")
+* querySelector is used for a single element
+* if multiple elements, you can use forEach function
+--
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    console.log(e);
+  });
+});
+
+- document.querySelectorAll("<selector of elements>")
+-- document.querySelector("a:link")
+* querySelectorAll is used for multiple elements
+
+change the text of element
+- <element>.textContent
+-- h1.textContent = myName;
+
+change the style of element
+- <element>.style.<name of style>
+* properties with more than 1 word has next words start
+  with a capital letter
+-- h1.style.backgroundColor = "red";
+
+event listener
+- do some things when an event occurs (e.g. mouse click)
+- <element>.addEventListener("<name of event>", 
+  function () {})
+-- 
+h1.addEventListener("click", function () {
+  h1.textContent = myName;
+  h1.style.backgroundColor = "red";
+  h1.style.padding = "5rem";
+});
+
+get date
+- const <variable name> = new Date();
+-- get the year
+--- const currentYear = new Date().getFullYear();
+
+class to element
+- <element>.classList;
+-- make it toggle (add and remove)
+--- <element>.classList.toggle("<name of class>");
+- <element>.classList.contains("<name of class>");
+-- this returns true or false if the element contains
+   the said class
+
+page anchors
+- use id on the element where it would be the href
+-- <section id="cta"></section>
+-- <a href="#cta"></a>
+
+scroll-behavior
+- scroll-behavior property makes the page anchor be smooth
+- place it in html (root element)
+- scroll-behavior: smooth;
+* safari does not support this, need to do some js
+
+prevent events
+- e.preventDefault();
+* is events
+--
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    console.log(e);
+  });
+  e.preventDefault();
+});
+
+get attribute from element
+- getAttribute("<name of attribute>")
+-- const href = link.getAttribute("href");
+
+scroll the window to a section of the page
+- window.scrollTo();
+--
+if (href === "#")
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+* even in safari, this is not implemented, need to use a
+  polyfill
+  * polyfill is a library of js that enables smoothscroll
+
+- <element>.scrollIntoView();
+--
+if (href !== "#" && href.startsWith("#")) {
+    const sectionEl = document.querySelector(href);
+    console.log(sectionEl);
+    sectionEl.scrollIntoView({ behavior: "smooth" });
+}
+
+check if the value starts with a character
+- <element>.startsWith("<the character>")
+-- href.startsWith("#")
+
+
+STICY NAVIGATION
+- position property has the value fixed and it will
+  fix the element onto the viewport even in scroll
+--
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+
+- intersection observer
+-- most performant and moden way
+-- observes the element
+-- new IntersectionObserver(function () {}, {});
+
+- add margin-top to hero because navbar is absolute 
+  positioned
+* add sticky class to body not on the navbar
+
+
+TEST AND OPTIMIZATION
+- browser support
+-- how browsers support styles / properties
+
+- websites for browser support:
+-- https://caniuse.com/
+
+* major browsers (together with its mobile variants):
+-- edge
+-- safari
+-- mozilla
+-- chrome
+
+- backdrop-filter property is a new property
+-- backdrop-filter: blur(10px);
+* blurs anything behind it
+* -webkit-backdrop-filter is for other browsers
+* -webkit- is a prefix that is used for some properties
+
+
+LIGHTHOUSE
+- in devTools (select inspect element), go to lighthouse
+  tab
+- unselect progressive web page
+- generate it
+* lighthouse should be run as well after deployment
+* not all metrics is 100% true
+
+
+meta description
+- 
+<meta name="description" content="Omnifood is an 
+AI-powered food subscription that will make you eat
+healthy again, 365 days per year. It's tailored to
+your personal tastes and nutritional needs" />
+
+favicon
+-
+<link rel="icon" href="img/favicon-small.png" />
+
+
+* in IOS and Android, you can make websites be put on
+  homepage, accomodate that as well
+
+Apple
+- 
+<link rel="apple-touch-icon" href="img/favicon-apple.png" />
+
+Android
+- create manifest.webmanifest
+{
+  "icons": [
+    {
+      "src": "/img/favicon-android.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
+
+-
+<link rel="manifest" href="manifest.webmanifest" />
+
+
+IMAGE OPTIMIZATION
+- check the largest size that the image should ever be and
+  retain that
+* intrinsic size should be 2x of rendered size
+- use squoosh to compile images to reduce files size (mb)
+
+- hacking browser support on image type
+--
+<picture>
+    <source srcset="hero/hero.webp" type="image/webp" />
+    <source srcset="hero/hero.png" type="image/png" />
+
+    <img
+    src="img/hero.png"
+    class="hero-img"
+    alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+    />
+</picture>
+
+
+DEPLOYMENT
+- use netlify
+* only downfall is that you need to set your IP to
+  1.1.1.1 either by directly changing it or using cloudfare
+  WARP
+- you can buy domains in goDaddy or hover.com
+
+Netlify Forms
+- go to forms tab
+- name your form and add the netlify attribute
+- name your form elements
+* only 100 records for free tier

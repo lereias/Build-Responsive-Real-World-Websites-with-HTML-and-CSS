@@ -64,6 +64,7 @@
 * hosting sites:
   ~ Netlify
     o https://www.netlify.com/
+  * you can buy domains in goDaddy or hover.com
 
 * analytics sites:
   ~ Google analytics
@@ -76,6 +77,19 @@
   ~ screensize.es
     o https://screensiz.es/
 
+- websites for browser support:
+-- https://caniuse.com/
+
 Site that is good:
-https://github.com/jensimmons/cssremedy
-https://every-layout.dev/
+- for global reset
+-- https://github.com/jensimmons/cssremedy
+
+- layouts
+-- https://every-layout.dev/
+
+- waves
+-- https://getwaves.io/
+
+- font pairs
+-- https://fontjoy.com/
+
